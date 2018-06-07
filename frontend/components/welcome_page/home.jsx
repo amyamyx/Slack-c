@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import HeaderContainer from './header_container'
 
 const Home = () => (
   <div className="welcome">
+    <HeaderContainer /> 
     {/* <h1>Welcome Page</h1> */}
     
     <section className="section-one">
@@ -22,11 +24,12 @@ const Home = () => (
     </section>
 
     <section className="section-two">
+      section-two
     </section>
 
     <footer>
-      <div className="footer-nav"></div>
-      <div className='footer-term'></div>
+      <div className="footer-nav">footer-nav</div>
+      <div className='footer-term'>footer-term</div>
     </footer>
 
   </div>

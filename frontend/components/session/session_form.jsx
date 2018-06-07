@@ -1,4 +1,5 @@
 import React from 'react';
+import HeaderContainer from '../welcome_page/header_container';
 
 class SessionForm extends React.Component {
   constructor(props){
@@ -51,29 +52,32 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div id="session-form" className="group">
-        <form onSubmit={this.handleSubmit}>
-          <h3>{this.renderErrors()}</h3>
-          <h1>{this.props.formType}</h1>
-          <input
-            type="text"
-            className="session-input group"
-            placeholder="username"
-            value={this.state.username}
-            onChange={this.handleInput('username')}
-          />
-          <br />
-          <input
-            type="password"
-            className="session-input group"
-            placeholder="password"
-            value={this.state.password}
-            onChange={this.handleInput('password')}
-          />
-          <br />
-          <button className="session-button group" type="submit">{this.props.formType}</button>
+      <div>
+        <HeaderContainer />
+        <div id="session-form" className="group">
+          <form onSubmit={this.handleSubmit}>
+            <h3>{this.renderErrors()}</h3>
+            <h1>{this.props.formType}</h1>
+            <input
+              type="text"
+              className="session-input group"
+              placeholder="username"
+              value={this.state.username}
+              onChange={this.handleInput('username')}
+            />
+            <br />
+            <input
+              type="password"
+              className="session-input group"
+              placeholder="password"
+              value={this.state.password}
+              onChange={this.handleInput('password')}
+            />
+            <br />
+            <button className="session-button group" type="submit">{this.props.formType}</button>
 
-        </form>
+          </form>
+        </div>
       </div>
     )
   }

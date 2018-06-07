@@ -51,7 +51,7 @@ header {
 }
 
 // header.jsx
-.greetings {
+.nav-list {
   // display: flex;
   // justify-content: space-between;
   // height:;
@@ -63,7 +63,16 @@ header {
 }
 
 .logged-in {
+  display: flex;
+}
 
+.logged-in-item {
+  margin-left: 10px;
+}
+
+.logout-button {
+  border-radius: 5px;
+  padding: 5px 15px;
 }
 
 .logged-out {
@@ -158,3 +167,11 @@ header {
   color: #5B5E6B;
 
 }
+
+.main-page {
+  background: peachpuff;
+  height: 500px;
+  width: 500px;
+  color: black;
+}
+

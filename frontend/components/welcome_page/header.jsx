@@ -7,8 +7,8 @@ const Header = props => {
   if (props.currentUser) {
     show = (
       <div className="logged-in">
-        <p>hi, {props.currentUser.username}!</p>
-        <button onClick={props.logout}>logout</button>
+        <p className="logged-in-item">hi, {props.currentUser.username}!</p>
+        <button className="logout-button logged-in-item" onClick={props.logout}>logout</button>
       </div>
     );
   } else {
@@ -26,7 +26,19 @@ const Header = props => {
   }
 
   return (
-    <div className="greetings">{show}</div>
+    <div>
+      <header className="header">
+        <nav className="header-nav clearfix">
+          <div className="logo">
+            <img src="https://a.slack-edge.com/436da/marketing/img/meta/favicon-32.png" />
+            <h1>slack-c</h1>
+          </div>
+          <div className="nav-list">
+            {show}
+          </div>
+        </nav>
+      </header>
+    </div>
   )
 }
 
