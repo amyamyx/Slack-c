@@ -1,0 +1,12 @@
+<% if logged_in? %>
+  <script type="text/javascript">
+    window.currentUser = <%= render(
+      "api/users/user.json.jbuilder",
+      user: current_user
+    ).html_safe %>
+  </script>
+<% end %>
+
+<div id="root">
+  <img src="https://www.star2.com/wp-content/uploads/2017/10/doc6x9059rrso217lrxm951-770x470.jpg" />
+</div>
