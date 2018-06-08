@@ -12,10 +12,10 @@
 class Team < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
-  has_many :channels
-  has_many :directs
+  has_many :channels, dependent: :destroy
+  has_many :directs, dependent: :destroy
 
-  has_many :team_memberships
+  has_many :team_memberships, dependent: :destroy
   has_many :team_members,
     through: :team_memberships,
     source: :user

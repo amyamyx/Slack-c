@@ -22,6 +22,11 @@ class User < ApplicationRecord
   has_many :team_memberships
   has_many :direct_memberships
   has_many :channel_memberships
+  
+  has_many :created_channels,
+    primary_key: :id,
+    foreign_key: :creator_id,
+    class_name: :Channel
 
   has_many :teams, through: :team_memberships
   has_many :channels, through: :channel_memberships
