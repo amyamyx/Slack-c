@@ -19,6 +19,14 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :team_memberships
+  has_many :direct_memberships
+  has_many :channel_memberships
+
+  has_many :teams, through: :team_memberships
+  has_many :channels, through: :channel_memberships
+  has_many :directs, through: :direct_memberships
+
   def User.generate_session_token
     SecureRandom.urlsafe_base64
   end

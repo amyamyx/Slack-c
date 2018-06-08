@@ -10,4 +10,13 @@
 #
 
 class Team < ApplicationRecord
+  validates :name, presence: true, uniqueness: true
+
+  has_many :channels
+  has_many :directs
+
+  has_many :team_memberships
+  has_many :team_members,
+    through: :team_memberships,
+    source: :user
 end

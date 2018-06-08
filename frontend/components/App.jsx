@@ -20,4 +20,4 @@ const App = () => (
   </div>
 )
 
-export default withRouter(App);
+export default App;

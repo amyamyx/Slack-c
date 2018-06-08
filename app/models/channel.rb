@@ -13,4 +13,15 @@
 #
 
 class Channel < ApplicationRecord
+  validates :name, :reator_id, :public, presence: true
+  validates :name, uniqueness: true
+  validates :name, uniqueness: { scope: :team_id, mesasge: "Channel already exists." }
+  validates :public, inclusion: { in: [true, false] }
+
+  belongs_to :team
+  has_many :channel_memberships
+  has_many :channel_members,
+    through: :channel_memberships,
+    source: :user
+
 end

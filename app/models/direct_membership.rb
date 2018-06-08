@@ -10,4 +10,6 @@
 #
 
 class DirectMembership < ApplicationRecord
+  belongs_to :user
+  belongs_to :direct
 end
