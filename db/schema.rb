@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180608164812) do
+ActiveRecord::Schema.define(version: 20180608184942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20180608164812) do
     t.datetime "updated_at", null: false
     t.index ["channel_id", "user_id"], name: "index_channel_memberships_on_channel_id_and_user_id", unique: true
     t.index ["user_id"], name: "index_channel_memberships_on_user_id", unique: true
+  end
+
+  create_table "channel_messages", force: :cascade do |t|
+    t.text "content", null: false
+    t.integer "user_id", null: false
+    t.integer "channel_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["channel_id"], name: "index_channel_messages_on_channel_id"
+    t.index ["user_id"], name: "index_channel_messages_on_user_id"
   end
 
   create_table "channels", force: :cascade do |t|
@@ -43,6 +53,16 @@ ActiveRecord::Schema.define(version: 20180608164812) do
     t.datetime "updated_at", null: false
     t.index ["direct_id", "user_id"], name: "index_direct_memberships_on_direct_id_and_user_id", unique: true
     t.index ["user_id"], name: "index_direct_memberships_on_user_id"
+  end
+
+  create_table "direct_messages", force: :cascade do |t|
+    t.text "content", null: false
+    t.integer "user_id", null: false
+    t.integer "direct_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["direct_id"], name: "index_direct_messages_on_direct_id"
+    t.index ["user_id"], name: "index_direct_messages_on_user_id"
   end
 
   create_table "directs", force: :cascade do |t|
