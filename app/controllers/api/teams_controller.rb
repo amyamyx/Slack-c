@@ -1,8 +1,11 @@
 class Api::TeamsController < ApplicationController
   def index
+    # user_id
+    @teams = current_user.teams
   end
   
   def show
+    @team = Team.find(params[:id])
   end
 
   private
