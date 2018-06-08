@@ -8,26 +8,6 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.errors.length===0) this.props.history.push("/")
-  // }
-
-  // componentDidMount(){
-  //   // debugger
-  //   console.warn("did mount first",this.props.errors.length);
-  //   if (this.props.errors.length !==0 ) this.props.clearErrors();
-  //   console.warn("did mount second", this.props.errors.length)
-  // }
-
-  // componentWillUnmount() {
-  //   // debugger;
-  //   console.warn("will unmount first",this.props.errors.length);
-  //   // if (this.props.errors.length !==0 ) this.props.clearErrors();
-  //   console.warn("will unmount second", this.props.errors.length)
-  // }
-
-  
-
   handleInput(type) {
     return (e) => {
       this.setState({ [type]: e.target.value })
