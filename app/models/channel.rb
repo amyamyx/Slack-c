@@ -20,7 +20,7 @@ class Channel < ApplicationRecord
   belongs_to :team
   belongs_to :creator,
     primary_key: :id,
-    foreign_id: :creator_id,
+    foreign_key: :creator_id,
     class_name: :User
   
   

@@ -9,7 +9,7 @@
 #
 
 class Direct < ApplicationRecord
-  
+
   belongs_to :team
   
   has_many :direct_messages

@@ -7,6 +7,7 @@
 #  direct_id  :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  visible    :boolean          default(TRUE), not null
 #
 
 require 'test_helper'
