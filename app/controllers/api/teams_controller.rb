@@ -13,9 +13,8 @@ class Api::TeamsController < ApplicationController
     @team = Team.new(team_params)
     
     if @team.save
-      @team.ensure_membership(current_user)
-      @team.create_general_channel(current_user)
       @channel = @team.channels.find_by_name("general")
+
       render 'api/channels/show'
     else
       render json: ["The name #{@team.name} has been taken."], status: 401

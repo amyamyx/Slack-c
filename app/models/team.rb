@@ -11,6 +11,12 @@
 
 class Team < ApplicationRecord
   validates :name, presence: true, uniqueness: true
+  after_save :ensure_membership, :create_general_channel
+  
+  belongs_to :creator,
+    primary_key: :id,
+    foreign_key: :creator_id,
+    class_name: :User
 
   has_many :channels, dependent: :destroy
   has_many :directs, dependent: :destroy
@@ -20,17 +26,17 @@ class Team < ApplicationRecord
     through: :team_memberships,
     source: :user
   
-  def ensure_membership(user)
+  def ensure_membership
     TeamMembership.create(
       team_id: self.id,
-      user_id: user.id
+      user_id: creator.id
     )
   end
 
-  def create_general_channel(user)
+  def create_general_channel
     Channel.create(
           name: "general",
-          creator_id: user.id,
+          creator_id: self.creator_id,
           team_id: self.id,
           public: true,
           purpose: "This channel is for team-wide communication and announcements. All team members are in this channel."
