@@ -13,8 +13,6 @@
 #
 
 class Channel < ApplicationRecord
-  include Messageable
-
   validates :name, :creator_id, :public, presence: true
   validates :name, uniqueness: { scope: :team_id, mesasge: "Channel already exists." }
   validates :public, inclusion: { in: [true, false] }
@@ -28,7 +26,7 @@ class Channel < ApplicationRecord
     class_name: :User
   
   
-  has_many :channel_messages, dependent: :destroy
+  has_many :messages, as: :messageable
   has_many :channel_memberships, dependent: :destroy
   has_many :channel_members,
     through: :channel_memberships,

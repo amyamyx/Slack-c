@@ -9,9 +9,9 @@
 #
 
 class Direct < ApplicationRecord
-  include Messageable
   belongs_to :team
   
+  has_many :messages, as: :messageable
   has_many :driect_memberships
   has_many :direct_members,
     through: :driect_memberships,
