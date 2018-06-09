@@ -30,4 +30,11 @@ class Channel < ApplicationRecord
     through: :channel_memberships,
     source: :user
 
+  def ensure_membership(user)
+    ChannelMembership.create(
+      channel_id: self.id,
+      user_id: user.id
+    )
+  end
+
 end

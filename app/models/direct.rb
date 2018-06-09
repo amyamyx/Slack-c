@@ -17,4 +17,11 @@ class Direct < ApplicationRecord
   has_many :direct_members,
     through: :driect_memberships,
     source: :user
+
+  def ensure_membership(user)
+    DirectMembership.create(
+      direct_id: self.id,
+      user_id: user.id
+    )
+  end
 end

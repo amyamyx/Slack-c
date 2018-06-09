@@ -1,11 +1,25 @@
 class Api::TeamsController < ApplicationController
+  # before_action :set_current_user
+
   def index
-    # user_id
     @teams = current_user.teams
   end
   
   def show
     @team = Team.find(params[:id])
+  end
+
+  def create
+    @team = Team.new(team_params)
+    
+    if @team.save
+      @team.ensure_membership(current_user)
+      @team.create_general_channel(current_user)
+      @channel = @team.channels.find_by_name("general")
+      render 'api/channels/show'
+    else
+      render json: ["The name #{@team.name} has been taken."], status: 401
+    end
   end
 
   private

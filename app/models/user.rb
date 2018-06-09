@@ -32,6 +32,17 @@ class User < ApplicationRecord
   has_many :channels, through: :channel_memberships
   has_many :directs, through: :direct_memberships
 
+  # allow models to access current_user
+  # (combined with #set_current_user in application_controller.rb)
+  # def self.current
+  #   Thread.current[:user]
+  # end
+
+  # def self.current=(user)
+  #   Thread.current[:user] = user
+  # end
+  ##
+
   def User.generate_session_token
     SecureRandom.urlsafe_base64
   end

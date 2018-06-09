@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     
     resource :session, only: [:create, :destroy]
     
-    resources :teams, only: [:show] do 
+    resources :teams, only: [:show, :create] do 
       resources :team_memberships, only: [:index, :create]
       resources :channels, only: [:index, :create]
       resources :directs, only: [:index, :create]

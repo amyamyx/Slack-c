@@ -23,4 +23,11 @@ class ApplicationController < ActionController::Base
 
   def require_logged_in
   end
+
+  # !!Not thread-safe!!
+  # add "before_action :set_current_user" in a controller
+  # to allow corresponding model to have access to current_user 
+  # def set_current_user
+  #   User.current = current_user
+  # end
 end

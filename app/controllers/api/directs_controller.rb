@@ -1,13 +1,16 @@
 class Api::DirectsController < ApplicationController
   def index
-    @directs = current_user
-                .directs
-                .where(team_id: params[:team_id])
+    # in index view, iterate through the ids and render members names
+    @direct_ids = current_user
+                .direct_memberships
+                .select(team_id)
+                .where(team_id: params[:team_id], visible: true)
   end
 
   def create
     # team_id
     # @direct = Direct.new(team_id: params[:team_id])
+    # ensure_membership
   end
 
   def show

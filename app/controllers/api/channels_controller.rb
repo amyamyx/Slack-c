@@ -10,6 +10,7 @@ class Api::ChannelsController < ApplicationController
     @channel.creator = current_user
 
     if @channel.save
+      @channel.ensure_membership(current_user)
       render :show
     else
       render json: @channel.errors_full_messages, status: 422
