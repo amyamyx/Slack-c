@@ -17,6 +17,8 @@ class Channel < ApplicationRecord
   validates :name, uniqueness: { scope: :team_id, mesasge: "Channel already exists." }
   validates :public, inclusion: { in: [true, false] }
 
+  after_save :ensure_membership
+  
   belongs_to :team
   belongs_to :creator,
     primary_key: :id,
@@ -30,10 +32,10 @@ class Channel < ApplicationRecord
     through: :channel_memberships,
     source: :user
 
-  def ensure_membership(user)
+  def ensure_membership
     ChannelMembership.create(
       channel_id: self.id,
-      user_id: user.id
+      user_id: self.creator_id
     )
   end
 
