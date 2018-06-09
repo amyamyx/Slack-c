@@ -1,6 +1,7 @@
 class Api::ChannelMessagesController < ApplicationController
   def index
     @messages = Channel.find(params[:channel_id]).messages
+    render 'api/messages/index'
   end
 
   def create
