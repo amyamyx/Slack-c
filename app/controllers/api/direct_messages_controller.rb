@@ -23,3 +23,4 @@ class Api::DirectMessagesController < ApplicationController
     params.require(:direct_message).permit(:content)
   end
 end
+# comment...
