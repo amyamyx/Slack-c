@@ -19,7 +19,7 @@ class MessageIndex extends React.Component {
         <ul>
         {this.props.messages.map( (message, idx) => (
           <li>
-              <MessageIndexItem key={idx} message={message}/>
+              <MessageIndexItem key={message.id} message={message}/>
           </li>
         ))}
         </ul>
