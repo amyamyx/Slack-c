@@ -6,22 +6,30 @@ import ChannelIndexContainer from './channel_index_container';
 // import DirectIndexContainer from './direct_index_container';
 
 
-const Sidebar = () => (
-  <div className="sidebar">
-    {/* <TeamIndexContainer/> */}
+class Sidebar extends React.Component {
+  constructor(props){
+    super(props);
+  }
 
-    <SidebarHeader/>
-    
-    <ChannelIndexContainer/>
-    {/* <DirectIndexContainer/> */}
+  render(){
+    return (
+      <div className="sidebar">
+        {/* <TeamIndexContainer/> */}
 
-    <ul>
-      <li>I</li>
-      <li>am</li>
-      <li>the</li>
-      <li>sidebar</li>
-    </ul>
-  </div>
-);
+        <SidebarHeader team={this.props.team} currentUser={this.props.currentUser}  />
+
+        <ChannelIndexContainer />
+        {/* <DirectIndexContainer/> */}
+
+        <ul>
+          <li>I</li>
+          <li>am</li>
+          <li>the</li>
+          <li>sidebar</li>
+        </ul>
+      </div>
+    )
+  }
+}
 
 export default Sidebar;

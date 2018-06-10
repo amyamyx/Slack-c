@@ -1,8 +1,13 @@
 import { connect } from 'react-redux';
 import Sidebar from './sidebar';
 
-const msp
+const msp = state => ({
+  team: {name: "Ape Academy", id: 1, creator_id: 1},
+  currentUser: {username: state.session.id}
+})
 
-const mdp
+const mdp = dispatch => ({
 
-export default conect(msp, mdp)(Sidebar);
+})
+
+export default connect(msp, null)(Sidebar);
