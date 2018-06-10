@@ -2,7 +2,7 @@ import React from 'react';
 
 import SidebarHeader from './sidebar_header';
 // import TeamIndexContainer from './team_index_container';
-// import ChannelIndexContainer from './channel_index_container';
+import ChannelIndexContainer from './channel_index_container';
 // import DirectIndexContainer from './direct_index_container';
 
 
@@ -12,7 +12,7 @@ const Sidebar = () => (
 
     <SidebarHeader/>
     
-    {/* <ChannelIndexContainer/> */}
+    <ChannelIndexContainer/>
     {/* <DirectIndexContainer/> */}
 
     <ul>
