@@ -19,11 +19,6 @@ class Chatbox extends React.Component {
           channelId={this.props.channelId}
         />
         <MessageIndexContainer />
-
-        <p>I</p>
-        <p>am</p>
-        <p>THE</p>
-        <p>chatbox</p>
         <MessageFormContainer />
       </div>
     )
