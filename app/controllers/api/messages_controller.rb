@@ -22,7 +22,7 @@ class Api::MessagesController < ApplicationController
     @message.user = current_user
 
     if @message.save
-      @messages = Channel.find(params[:channel_id]).messages
+      @messages = type.constantize.find(id).messages
       render :index
     else
       render json: @message.errors.full_messages, status: 422
