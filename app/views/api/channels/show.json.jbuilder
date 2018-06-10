@@ -2,10 +2,10 @@ json.channel do
   json.partial! @channel
 end
 
-json.channelMessages do 
+json.messages do 
   @channel.messages.each do |message|
     json.set! message.id do
-      json.extract! message, :user_id, :content, :created_at
+      json.extract! message, :id, :user_id, :content, :created_at
     end
   end
 end

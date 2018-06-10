@@ -20,6 +20,7 @@ class MessageForm extends React.Component {
     this.setState({content: ""});
   }
 
+
   render(){
     return (
       <div className="message-form">

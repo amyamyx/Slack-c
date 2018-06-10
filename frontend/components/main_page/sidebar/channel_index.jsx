@@ -13,8 +13,8 @@ class ChannelIndex extends React.Component{
   render() {
     return (
       <div className="sidebar-channel-index">
-        {this.props.channels.map(channel => (
-          <ChannelIndexItem channel={channel} key={channel.id} />
+        {this.props.channels.map((channel, idx) => (
+          <ChannelIndexItem key={idx} channel={channel}/>
         ))}
       </div>
     )

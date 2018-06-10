@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ChatboxHeader = () => (
+const ChatboxHeader = (props) => (
   <div className="chatbox-header">
     
     <div className="chatbox-header-left">

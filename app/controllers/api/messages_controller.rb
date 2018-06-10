@@ -22,8 +22,7 @@ class Api::MessagesController < ApplicationController
     @message.user = current_user
 
     if @message.save
-      @messages = type.constantize.find(id).messages
-      render :index
+      render :show
     else
       render json: @message.errors.full_messages, status: 422
     end
