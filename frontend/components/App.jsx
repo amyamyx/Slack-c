@@ -16,7 +16,7 @@ const App = () => (
       <AuthRoute path="/login" exact component={LoginContainer} />
       {/* <ProtectedRoute path={} exact component={MainPage} /> */}
       <ProtectedRoute path="/channels/:channelId" exact component={MainPage} />
-      <Route path="/" exact component={Home}/>
+      <AuthRoute path="/" exact component={Home}/>
     {/* </Switch> */}
   </div>
 )

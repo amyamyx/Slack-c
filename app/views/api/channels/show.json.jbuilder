@@ -9,3 +9,11 @@ json.messages do
     end
   end
 end
+
+json.channel_members do
+  @channel.channel_members.each do |member|
+    json.set! member.id do
+      json.extract! member, :id, :username
+    end
+  end
+end

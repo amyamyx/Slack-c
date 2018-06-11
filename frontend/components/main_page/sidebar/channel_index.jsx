@@ -7,7 +7,7 @@ class ChannelIndex extends React.Component{
   }
 
   componentDidMount(){
-    this.props.fetchChannels(1);
+    this.props.fetchChannels(this.props.teamId);
   }
 
   render() {

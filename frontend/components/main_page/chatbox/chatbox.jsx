@@ -1,25 +1,27 @@
 import React from 'react';
-import ChatboxHeader from './chatbox_header';
+import ChatboxHeaderContainer from './chatbox_header_container';
 import MessageFormContainer from './message_form_container';
 import MessageIndexContainer from './message_index_container';
 
 class Chatbox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
   }
-  componentDidMount(){
+  componentWillMount(){
+    // debugger
     this.props.fetchChannel(this.props.channelId)
+    this.props.fetchUsers();
   }
 
   render(){
+    const { channelId } = this.props
     return(
       <div className="chatbox">
-        <ChatboxHeader
-          channelId={this.props.channelId}
+        <ChatboxHeaderContainer
+          channelId={channelId}
         />
-        <MessageIndexContainer />
-        <MessageFormContainer />
+        <MessageIndexContainer channelId={channelId}/>
+        <MessageFormContainer channelId={channelId} />
       </div>
     )
   }

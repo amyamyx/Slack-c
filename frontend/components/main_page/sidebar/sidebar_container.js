@@ -2,10 +2,11 @@ import { connect } from 'react-redux';
 import Sidebar from './sidebar';
 import { logout } from '../../../actions/session_actions';
 
-const msp = state => ({
+const msp = (state) => {
+  return{
   team: {name: "Ape Academy", id: 1, creator_id: 1},
-  currentUser: {username: state.session.id}
-})
+  currentUser: state.entities.users[state.session.id]
+}}
 
 const mdp = dispatch => ({
   logout: () => dispatch(logout())

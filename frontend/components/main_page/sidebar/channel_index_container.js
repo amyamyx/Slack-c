@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import ChannelIndex from './channel_index';
 import { fetchChannels } from '../../../actions/channel_actions';
-const msp = (state) => ({
+const msp = (state, ownProps) => ({
+  teamId: ownProps.teamId,
   channels: Object.values(state.entities.channels)
 })
 

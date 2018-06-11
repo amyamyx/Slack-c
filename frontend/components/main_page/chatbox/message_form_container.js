@@ -5,7 +5,7 @@ import { fetchChannel } from '../../../actions/channel_actions';
 
 const msp = (state, ownProps) => ({
   message: {content: ""},
-  channelId: 1
+  channel: ownProps.channel
 })
 
 const mdp = dispatch => ({

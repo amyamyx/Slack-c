@@ -1,6 +1,7 @@
 import React from 'react';
 
 const SidebarHeader = (props) => {
+  // debugger;
   return(
     <div className="sidebar-header">
       <h3 className="team-name">{props.team.name}</h3>

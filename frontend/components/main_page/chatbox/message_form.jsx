@@ -28,6 +28,7 @@ class MessageForm extends React.Component {
   }
 
   render(){
+
     return (
       <div className="message-form">
         <div className="plus-icon"><i className="fas fa-plus"></i></div>
@@ -36,7 +37,7 @@ class MessageForm extends React.Component {
             value={this.state.content}
             onChange={this.handleInput}
             onKeyPress={this.handleKeyPress}
-            placeholder={`Message # general`}
+            // placeholder={`Message # ${this.props.channel.name}`}
           />
           {/* <button type="submit">Send</button> */}
         </form>

@@ -1,10 +1,15 @@
 import React from 'react';
 
-const ChatboxHeader = (props) => (
+const ChatboxHeader = (props) => {
+  if (!props.channel) {
+    return null;
+  }
+  
+  return (
   <div className="chatbox-header">
     
     <div className="chatbox-header-left">
-      <h3> #general </h3>
+      <h3> # {props.channel.name} </h3>
       <h5 className="header-member"><i className="far fa-user"></i> 2,290</h5>
     </div>
 
@@ -26,5 +31,6 @@ const ChatboxHeader = (props) => (
     
   </div>
 )
+}
 
 export default ChatboxHeader;
