@@ -22,7 +22,11 @@ class Api::MessagesController < ApplicationController
     @message.user = current_user
 
     if @message.save
-      render :show
+      ActionCable.server.broadcast "#{@message.messageable_type}-#{@message.messageable_id}",
+        content: @message.content,
+        user_id: @message.user_id,
+        created_at: @messagae.created_at
+      head :ok
     else
       render json: @message.errors.full_messages, status: 422
     end

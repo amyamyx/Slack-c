@@ -133,6 +133,7 @@ GEM
     public_suffix (3.0.2)
     puma (3.11.4)
     rack (2.0.5)
+    rack-cors (1.0.2)
     rack-livereload (0.3.17)
       rack
     rack-test (1.0.0)
@@ -154,11 +155,6 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (5.1.6)
       actionpack (= 5.1.6)
       activesupport (= 5.1.6)
@@ -234,9 +230,9 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 3.7)
+  rack-cors
   rack-livereload
   rails (~> 5.1.6)
-  rails_12factor
   rb-fsevent
   redis (~> 4.0)
   sass-rails (~> 5.0)
