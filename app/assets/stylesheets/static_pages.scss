@@ -26,6 +26,10 @@ header {
  
 }
 
+.logo-link {
+  text-decoration: none;
+}
+
 .logo {
   // display: flex;
   // justify-content: space-between;
@@ -106,6 +110,15 @@ header {
   font-size: 16px;
   margin-right: 10px;
   border-radius: 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: #3f45ad;
+  border: 1px solid #3f45ad !important;
 }
 
 // .clearfix:after{
@@ -120,9 +133,11 @@ header {
 
 .section-one {
   display: flex;
+  justify-content: space-between;
 }
 
 .main-img img {
+  display: inline-block;
   height: 60%;
   margin-left: 50px;
   width: auto;
@@ -130,8 +145,9 @@ header {
 }
 
 .main-text {
+  display: inline-block;
   margin-top: 20px;
-  margin-left: -80px;;
+  margin-left: -80px;
   padding-right: 35px;
 }
 
@@ -157,9 +173,18 @@ header {
 .get-started {
   font-size: 13px;
   background: #3f46ad;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: #fff;
   padding: 20px 35px;
   border-radius: 5px;
+}
+
+.get-started:hover {
+  cursor: pointer;
+  background: #1c2a9c;
 }
 
 .main-text p:nth-of-type(2) {

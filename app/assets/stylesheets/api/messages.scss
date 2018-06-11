@@ -10,6 +10,9 @@
   justify-content: space-between;
   // background: peachpuff;
   // width: 100%;
+  height: 10%;
+  margin: 0;
+  // background: peachpuff;
 }
 
 .info-circle-icon {
@@ -17,13 +20,18 @@
   height: auto;
 }
 
+.chatbox-header-left {
+  padding-left: 20px;
+  margin-top: -10px;
+}
+
 .chatbox-header-left h3 { 
-  font-size: 16x;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .header-member {
-  margin-top: -18px;
+  margin-top: -15px;
   font-weight: 300;
   color: #818284;
 }
@@ -71,14 +79,9 @@
   padding-left: 10px;
 }
 
-.chatbox-header{
-  height: 12%;
-  margin: 0;
-  background: peachpuff;
-}
 
 .message-form{
-  height: 10%;
+  height: 12%;
   margin: 0;
   overflow: scroll;
   // background: tomato;
@@ -90,13 +93,58 @@
   height: 78%;
   margin: 0;
   overflow: scroll;
-  background: lightseagreen;
+  // background: lightseagreen;
 }
 
 
 .message-list {
   overflow: hidden;
+  list-style: none;
 }
+
+.message-index-item {
+  margin-left: -10px;
+  margin-bottom: 5px;
+  // background: lightseagreen;
+}
+
+.message-list-item {
+  display: flex;
+}
+
+.profile-img img {
+  height: 36px;
+  width: auto;
+  border-radius: 3px;
+}
+
+.message-right{
+  margin-left: 5px;
+}
+
+.name-time {
+  display: flex;
+}
+
+.sender {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+
+.send-time{
+  font-size: 12px;
+  color:#717274;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+.message-content {
+  font-size: 15px;
+  color: #2c2d30;
+}
+
 
 .fa-plus {
   border: 2px solid #717274;
@@ -112,7 +160,7 @@
   // -moz-appearance: none;
   border: transparent;
   height: 22px;
-  // width: 990px;
+  width: 700px;
   box-shadow:none;
   padding: 8px;
   font-size: 14px;
@@ -124,4 +172,8 @@
 
 .message-form textarea:focus {
   outline: none;
+}
+
+.message-form textarea::-webkit-input-placeholder {
+  color: #b2b2b2;
 }
