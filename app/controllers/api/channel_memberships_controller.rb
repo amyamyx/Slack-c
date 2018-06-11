@@ -1,7 +1,6 @@
 class Api::ChannelMembershipsController < ApplicationController
   def index
-    @channel_memberships = Channel.find(params[:channel_id]
-                                  .channel_memberships
+    @channel_memberships = Channel.find(params[:channel_id].channel_memberships)
   end
 
   def create
