@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   def login(user)
     @current_user = user
     session[:session_token] = user.reset_session_token!
+    cookies.signed[:user_id] = user.id
   end
 
   def current_user
@@ -18,6 +19,7 @@ class ApplicationController < ActionController::Base
 
   def logout
     current_user.reset_session_token!
+    cookies.delete(:user_id)
     session[:session_token] = nil
   end
 
