@@ -7,17 +7,24 @@ class MessageForm extends React.Component {
     this.state = this.props.message;
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
-  handleInput(e){
+  handleInput(e) {
     e.preventDefault();
     this.setState({content: e.target.value});
   }
 
-  handleSubmit(e){
+  handleSubmit(e) {
     e.preventDefault();
     this.props.createMessage(this.props.channelId, this.state);
     this.setState({content: ""});
+  }
+
+  handleKeyPress(e) {
+    if (e.key === "Enter" && e.shiftKey === false) {
+      this.handleSubmit(e);
+    }
   }
 
   render(){
@@ -27,6 +34,7 @@ class MessageForm extends React.Component {
           <textarea
             value={this.state.content}
             onChange={this.handleInput}
+            onKeyPress={this.handleKeyPress}
           />
           <button type="submit">Send</button>
         </form>
