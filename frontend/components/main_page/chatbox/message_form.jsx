@@ -1,8 +1,8 @@
 import React from 'react';
+import ActionCable from 'actioncable';
 
 class MessageForm extends React.Component {
   constructor(props) {
-    // debugger;
     super(props);
     this.state = this.props.message;
     this.handleInput = this.handleInput.bind(this);
@@ -19,7 +19,6 @@ class MessageForm extends React.Component {
     this.props.createMessage(this.props.channelId, this.state);
     this.setState({content: ""});
   }
-
 
   render(){
     return (

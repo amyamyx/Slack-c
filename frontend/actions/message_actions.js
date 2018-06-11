@@ -9,9 +9,11 @@ export const createChannelMessage = (channelId, message) => dispatch => (
                 .then(() => dispatch(fetchChannel(channelId)))
 )
 
+
 // dispatch another action to fetch all messages
 
-// const receiveMessage = message => ({
-//   type: RECEIVE_MESSAGE,
-//   message
-// })
+export const receiveMessage = message => ({
+  type: RECEIVE_MESSAGE,
+  message
+})
+

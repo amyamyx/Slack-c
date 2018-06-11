@@ -13,3 +13,17 @@ export const createDirectMessage = (directId, message) => (
     data: { message }
   })
 )
+
+export const fetchChannelMessages = channelId => (
+  $.ajax({
+    type: 'GET',
+    url: `api/channels/${channelId}/messages`
+  })
+)
+
+export const fetchDirectMessages = directId => (
+  $.ajax({
+    type: 'GET',
+    url: `api/directs/${directId}/messages`
+  })
+)

@@ -8,6 +8,7 @@ const messagesReducer = ( state={}, action ) => {
     case RECEIVE_CHANNEL:
       return action.payload.messages
     case RECEIVE_MESSAGE:
+      debugger;
       return merge({}, state, { [action.message.id]: action.message });
     default: 
       return state;
