@@ -30,13 +30,15 @@ class MessageForm extends React.Component {
   render(){
     return (
       <div className="message-form">
+        <div className="plus-icon"><i className="fas fa-plus"></i></div>
         <form onSubmit={this.handleSubmit}>
           <textarea
             value={this.state.content}
             onChange={this.handleInput}
             onKeyPress={this.handleKeyPress}
+            placeholder={`Message # general`}
           />
-          <button type="submit">Send</button>
+          {/* <button type="submit">Send</button> */}
         </form>
       </div>
     )

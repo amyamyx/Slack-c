@@ -11,8 +11,9 @@ class MessageIndex extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchChannel(this.props.channelId);
-    this.createConnection( this.props.channelId, this.props.fetchChannel)
+    const { channelId, fetchChannel } = this.props;
+    this.props.fetchChannel(channelId);
+    this.createConnection( channelId, fetchChannel)
     this.scrollToBottom();
   }
   componentDidUpdeate(){
