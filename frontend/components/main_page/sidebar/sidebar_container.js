@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Sidebar from './sidebar';
+import { logout } from '../../../actions/session_actions';
 
 const msp = state => ({
   team: {name: "Ape Academy", id: 1, creator_id: 1},
@@ -7,7 +8,7 @@ const msp = state => ({
 })
 
 const mdp = dispatch => ({
-
+  logout: () => dispatch(logout())
 })
 
-export default connect(msp, null)(Sidebar);
+export default connect(msp, mdp)(Sidebar);

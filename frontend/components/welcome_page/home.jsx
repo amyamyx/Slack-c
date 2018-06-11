@@ -17,7 +17,9 @@ const Home = () => (
         <p>When your team needs to kick off a project, hire a new employee, deploy some code, review a sales contract, finalize next year's budget, measure an A/B test, plan your next office opening, and more, Slack has you covered.</p>
         <form>
           {/* <input type="text" placeholder="Email address" value=""/> */}
-          <button className="get-started" type="submit">GET STARTED</button>
+          <Link to="/signup">
+            <button className="get-started" type="submit">GET STARTED</button>
+          </Link>
         </form>
         <p>Already using Slack? <span><Link to="/login">Sign in.</Link></span></p> 
       </div>

@@ -16,7 +16,7 @@ class Sidebar extends React.Component {
       <div className="sidebar">
         {/* <TeamIndexContainer/> */}
 
-        <SidebarHeader team={this.props.team} currentUser={this.props.currentUser}  />
+        <SidebarHeader team={this.props.team} currentUser={this.props.currentUser} logout={this.props.logout}  />
 
         <ChannelIndexContainer />
         {/* <DirectIndexContainer/> */}

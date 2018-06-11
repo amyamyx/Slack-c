@@ -10,6 +10,7 @@ const Header = props => {
         <button className="logout-button logged-in-item" onClick={props.logout}>logout</button>
       </div>
     );
+
   } else {
     show = (
       <div className="logged-out clearfix">
@@ -28,10 +29,12 @@ const Header = props => {
     <div>
       <header className="header">
         <nav className="header-nav clearfix">
-          <div className="logo">
-            <img src="https://a.slack-edge.com/436da/marketing/img/meta/favicon-32.png" />
-            <h1>slack-c</h1>
-          </div>
+          <Link to="/" className="logo-link">
+            <div className="logo">
+              <img src="https://a.slack-edge.com/436da/marketing/img/meta/favicon-32.png" />
+              <h1>slack-c</h1>
+            </div>
+          </Link>
           <div className="nav-list">
             {show}
           </div>
