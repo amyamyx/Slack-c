@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import SidebarHeader from './sidebar_header';
 // import TeamIndexContainer from './team_index_container';
@@ -30,10 +31,7 @@ class Sidebar extends React.Component {
         />
 
         <ChannelIndexContainer teamId={this.props.team.id}/>
-        <button onClick={this.handleClick}>New Channel</button>
-        <div className={`channel-form-div ${this.formVisibility}`}>
-          <ChannelFormContainer/>
-        </div>
+        <Link to="/newChannel"><button>New Channel</button></Link>
         {/* <DirectIndexContainer/> */}
 
         <ul>

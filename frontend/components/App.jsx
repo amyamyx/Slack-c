@@ -17,7 +17,7 @@ const App = () => (
       <AuthRoute path="/login" exact component={LoginContainer} />
       {/* <ProtectedRoute path={} exact component={MainPage} /> */}
       <ProtectedRoute path="/channels/:channelId" exact component={MainPage} />
-      {/* <ProtectedRoute path="/newChannel" exact component={ChannelFormContainer} /> */}
+      <ProtectedRoute path="/newChannel" exact component={ChannelFormContainer} />
       <AuthRoute path="/" exact component={Home}/>
     {/* </Switch> */}
   </div>

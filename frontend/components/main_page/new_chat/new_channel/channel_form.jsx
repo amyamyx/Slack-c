@@ -25,9 +25,7 @@ class ChannelForm extends React.Component {
   }
 
   handleClick(e) {
-    e.preventDefault();
-    const form = document.getElementsByClassName('channel-form-div')[0];
-    form.classList.add('invisible');
+    this.props.history.goBack();
   }
 
   changeVisibility() {
@@ -47,7 +45,7 @@ class ChannelForm extends React.Component {
 
   render() {
     return (
-      <div className="channel-form" ref={el => this.form}>
+      <div className="channel-form">
 
         <button className="esc-btn" onClick={this.handleClick}>
           <span className="x">X</span>
