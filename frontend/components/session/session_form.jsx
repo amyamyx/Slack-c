@@ -59,8 +59,10 @@ class SessionForm extends React.Component {
               onChange={this.handleInput('password')}
             />
             <br />
-            <button className="session-button group" type="submit">{this.props.formType}</button>
-            <button className="demo-login" onClick={this.handleClick}>Demo login</button>
+            <div className="buttons">
+              <button className="session-button group" type="submit">{this.props.formType}</button>
+              <button className="demo-login" onClick={this.handleClick}>Demo login</button>
+            </div>
           </form>
         </div>
       </div>

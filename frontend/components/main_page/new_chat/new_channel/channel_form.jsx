@@ -22,6 +22,8 @@ class ChannelForm extends React.Component {
     const { team } = this.props;
     e.preventDefault();
     this.props.createChannel(team.id, this.state);
+    // @Todo
+    this.props.history.goBack();
   }
 
   handleClick(e) {

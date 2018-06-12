@@ -14,6 +14,8 @@ const ChatboxHeader = (props) => {
     </div>
 
     <div className="chatbox-header-right">
+      {/* // Todo */}
+      <button>delete channel</button>
       <div className="info-circle icon">
         <img className="info-circle-icon" src="https://png.pngtree.com/element_our/md/20180314/md_5aa8fceea1b8e.png"/>
       </div>

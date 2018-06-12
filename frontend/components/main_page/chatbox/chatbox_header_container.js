@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import ChatboxHeader from './chatbox_header';
+import { deleteChannel } from '../../../actions/channel_actions';
 
 const msp = (state, ownProps) => {
   console.log("chatboxheader", state);
@@ -8,5 +9,9 @@ const msp = (state, ownProps) => {
   }
 }
 
+const mdp = dispatch => ({
+  deleteChannel: channelId => dispatch(deleteChannel(channelId))
+})
 
-export default connect(msp, null)(ChatboxHeader);
+
+export default connect(msp, mdp)(ChatboxHeader);

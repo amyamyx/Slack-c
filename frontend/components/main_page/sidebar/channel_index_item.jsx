@@ -1,8 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const ChannelIndexItem = (props) => (
   <div className="channel-index-item">
-    <span> # {props.channel.name}</span>
+    <Link className="item-link" to={`/channels/${props.channel.id}`}>
+      <span> # {props.channel.name}</span>
+    </Link>
   </div>
 )
 

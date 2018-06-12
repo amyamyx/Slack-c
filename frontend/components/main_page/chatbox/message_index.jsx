@@ -9,6 +9,12 @@ class MessageIndex extends React.Component {
     this.state = { messages: this.props.messages };
     this.scrollToBottom = this.scrollToBottom.bind(this);
   }
+ 
+  // componentWillReceiveProps(nextProps) {
+  //   if (this.props.channelId !== nextProps.channelId) {
+  //     this.props.fetchChannel(nextProps.channelId)
+  //   }
+  // }
 
   componentDidMount(){
     const { channelId, fetchChannel } = this.props;
