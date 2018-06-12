@@ -6,4 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Team.create(name: "Team1", creator_id: 1)
+# Users
+tofu = User.create(username: "tofu", password: "asdfjkl")
+tommy = User.creare(username: "tommy", password: "asdfjkl")
+chou = User.create(username: "steven_chou", password: "asdfjkl")
+hong = User.create(username: "hongkong3345678", password: "asdfjkl")
+
+team1 = Team.create(name: "Team1", creator_id: tofu.id)
+team2 = Team.create(name: "Ape Acadmey", creator_id:)
+team3 = Team.create(name: "")

@@ -1,0 +1,30 @@
+.channel-form {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.esc-btn {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  height: 65px;
+  width: 65px;
+  border-radius: 100%;
+  font-size: 11px;
+  color: #717274;
+  border: transparent;
+  cursor: pointer;
+}
+
+.x {
+  font-size: 28px;
+}
+
+.esc-btn:hover {
+  background: #e8e8e8;
+}
+
+.esc-btn:active {
+  background: #008951;
+  color: white;
+}

@@ -19,8 +19,8 @@ export const updateChannel = channel => dispatch => (
                 .then( channel => dispatch(receiveChannel(channel)))
 );
 
-export const createChannel = channel => dispatch => (
-  ChannelAPIUtil.createChannel(channel)
+export const createChannel = (teamId, channel) => dispatch => (
+  ChannelAPIUtil.createChannel(teamId, channel)
                 .then( channel => dispatch(receiveChannel(channel)))
 );
 
