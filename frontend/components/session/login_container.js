@@ -10,7 +10,8 @@ const msp = state => ({
 
 const mdp = dispatch => ({
   action: user => dispatch(login(user)),
-  clearErrors: () => dispatch(clearErrors())
+  clearErrors: () => dispatch(clearErrors()),
+  login: user => dispatch(login(user))
 })
 
 export default connect(

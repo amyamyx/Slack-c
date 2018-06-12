@@ -6,6 +6,7 @@ class SessionForm extends React.Component {
     super(props);
     this.state = { username: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleInput(type) {
@@ -18,6 +19,10 @@ class SessionForm extends React.Component {
     e.preventDefault();
     this.props.action(this.state)
     this.setState({username: "", password:""})
+  }
+
+  handleClick(e) {
+    this.props.login({username: "tofu", password: "asdfjkl"})
   }
 
   renderErrors() {
@@ -55,7 +60,7 @@ class SessionForm extends React.Component {
             />
             <br />
             <button className="session-button group" type="submit">{this.props.formType}</button>
-
+            <button className="demo-login" onClick={this.handleClick}>Demo login</button>
           </form>
         </div>
       </div>
