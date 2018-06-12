@@ -8,7 +8,7 @@
 
 # Users
 tofu = User.create(username: "tofu", password: "asdfjkl")
-tommy = User.creare(username: "tommy", password: "asdfjkl")
+tommy = User.create(username: "tommy", password: "asdfjkl")
 chou = User.create(username: "steven_chou", password: "asdfjkl")
 hong = User.create(username: "hongkong3345678", password: "asdfjkl")
 
