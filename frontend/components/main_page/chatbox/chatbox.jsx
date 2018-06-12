@@ -17,10 +17,16 @@ class Chatbox extends React.Component {
     return(
       <div className="chatbox">
         <ChatboxHeaderContainer
-          channelId={channelId}
-        />
-        <MessageIndexContainer channelId={channelId}/>
-        <MessageFormContainer channelId={channelId} />
+          channelId={channelId} />
+        
+        {/* <div className="chatbox-left"> */}
+          <MessageIndexContainer channelId={channelId}/>
+          <MessageFormContainer channelId={channelId} />
+        {/* </div> */}
+        
+        {/* <div className="chatbox-right">
+        </div> */}
+        
       </div>
     )
   }

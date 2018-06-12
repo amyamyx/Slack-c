@@ -4,8 +4,6 @@ import { fetchChannel } from '../../../actions/channel_actions';
 import { receiveMessage } from '../../../actions/message_actions';
 
 const msp = ( state, ownProps ) => {
-  console.log("state", state)
-  console.log("ownProps", ownProps)
   return {
   channel: state.entities.channels[ownProps.channelId],
   messages: Object.values(state.entities.messages),
