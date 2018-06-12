@@ -17,7 +17,7 @@ const ChatboxHeader = (props) => {
   }
   
   const handleClick = (e) => {
-    if (modal) { openModal(modal) }
+    openModal("channel")
   }
 
   let button;
@@ -44,7 +44,7 @@ const ChatboxHeader = (props) => {
     <div className="chatbox-header-right">
       {/* // Todo */}
       { button }
-      <div className="info-circle icon">
+      <div className="info-circle icon" onClick={(e)=>handleClick(e)}>
         <img className="info-circle-icon" src="https://png.pngtree.com/element_our/md/20180314/md_5aa8fceea1b8e.png"/>
       </div>
 

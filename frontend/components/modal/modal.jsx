@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
-import ChannelMemberContainer from '../main_page/chatbox/member_index_container';
+import ChannelMembersContainer from '../main_page/chatbox/channel_member_container';
 
 const Modal = ({ modal, closeModal }) => {
   if (!modal) null;
@@ -9,8 +9,8 @@ const Modal = ({ modal, closeModal }) => {
   switch (modal) {
     case 'channel':
       component = <ChannelMembersContainer/>;
-    case 'direct':
-      component = <DirectMembersContainer/>;
+    // case 'direct':
+    //   component = <DirectMembersContainer/>;
     default:
       return null;
   }
