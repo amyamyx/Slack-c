@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 
 
 import SignupContainer from './session/signup_container';
@@ -12,14 +12,15 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div id="app">
-    {/* <Switch> */}
+    <Switch>
       <AuthRoute path="/signup" exact component={SignupContainer} />
       <AuthRoute path="/login" exact component={LoginContainer} />
       {/* <ProtectedRoute path={} exact component={MainPage} /> */}
       <ProtectedRoute path="/channels/:channelId" exact component={MainPage} />
       <ProtectedRoute path="/newChannel" exact component={ChannelFormContainer} />
       <AuthRoute path="/" exact component={Home}/>
-    {/* </Switch> */}
+      <Redirect from="*" to="/"/>
+    </Switch>
   </div>
 )
 
