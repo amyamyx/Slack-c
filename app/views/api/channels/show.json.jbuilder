@@ -3,10 +3,14 @@ json.channel do
   json.extract! @channel, :creator_id
 end
 
-json.messages do 
-  @channel.messages.each do |message|
-    json.set! message.id do
-      json.partial! 'api/messages/message', message: message
+if @channel.messages.empty?
+  json.messages({})
+else
+  json.messages do 
+    @channel.messages.each do |message|
+      json.set! message.id do
+        json.partial! 'api/messages/message', message: message
+      end
     end
   end
 end
