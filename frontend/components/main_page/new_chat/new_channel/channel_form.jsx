@@ -21,13 +21,13 @@ class ChannelForm extends React.Component {
   handleSubmit(e) {
     const { team } = this.props;
     e.preventDefault();
-    this.props.createChannel(team.id, this.state);
+    this.props.createChannel(team.id, this.state).then(res => this.props.history.push(`/channels/${res.payload.channel.id}`))
     // @Todo
-    this.props.history.goBack();
+    // this.props.history.goBack();
   }
 
   handleClick(e) {
-    this.props.history.goBack();
+    this.props.history.go(-1);
   }
 
   changeVisibility() {
@@ -46,6 +46,7 @@ class ChannelForm extends React.Component {
   }
 
   render() {
+    console.dir(this.props.history)
     return (
       <div className="channel-form">
 
