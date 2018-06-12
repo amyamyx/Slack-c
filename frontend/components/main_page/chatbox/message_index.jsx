@@ -46,12 +46,24 @@ class MessageIndex extends React.Component {
   }
 
   render(){
+    const { messages, users } = this.props;
+    const list = (
+      messages.map( message => {
+        const username = users[message.userId].username;
+        return (
+          <MessageIndexItem
+            key={message.id}
+            message={message}
+            username={username}
+          />
+        );
+      })
+    );
+
     return (
       <div className="message-index" ref={el => { this.index = el }}>
         <ul className="message-list">
-          {this.props.messages.map( message => (
-            <MessageIndexItem key={message.id} message={message}/>
-          ))}
+          {list}
         </ul>
       </div>
     )

@@ -11,7 +11,7 @@ const MessageIndexItem = (props) => (
       <div className="message-right">
 
         <div className="name-time">
-          <span className="sender">{props.message.userId}</span>
+          <span className="sender">{props.username}</span>
           <span className="send-time">{props.message.createdAt}</span>
         </div>
         

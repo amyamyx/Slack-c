@@ -9,7 +9,7 @@ const msp = ( state, ownProps ) => {
   return {
   channel: state.entities.channels[ownProps.channelId],
   messages: Object.values(state.entities.messages),
-  users: Object.values(state.entities.users)
+  users: state.entities.users
 }}
 
 const mdp = dispatch => ({
