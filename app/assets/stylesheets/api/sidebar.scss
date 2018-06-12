@@ -8,20 +8,34 @@
   color: black;
   display: flex;
   height: 700px;
-  // margin-left: -8px;
-  // margin-top: -8px;
 }
 
 .sidebar {
   background: #473A4A;
   max-height: 100%;
-  width: 218px;
-  padding: 20px;
+  width: 266px;
   padding-bottom: none;
   color: #cac4c9;
   overflow: scroll;
+  line-height: 1.8em;
+}
+
+.sidebar-header {
+  padding-left: 20px;
 }
 
 .team-name {
   color: white;
+}
+
+.channel-index-item {
+  padding-left: 20px;
+}
+
+.highlight {
+  background: #4c9689;
+}
+
+.highlight span {
+  color:white;
 }

@@ -11,26 +11,21 @@ import ChannelFormContainer from '../new_chat/new_channel/channel_form_container
 class Sidebar extends React.Component {
   constructor(props){
     super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.formVisibility = 'invisible';
   }
-
-  handleClick(e) {
-    this.formVisibility = '';
-  }
-
+  
   render(){
+    const { team, channelId, currentUser, logout } = this.props;
     return (
       <div className="sidebar">
         {/* <TeamIndexContainer/> */}
 
         <SidebarHeader 
-          team={this.props.team} 
-          currentUser={this.props.currentUser} 
-          logout={this.props.logout}
+          team={team} 
+          currentUser={currentUser} 
+          logout={logout}
         />
 
-        <ChannelIndexContainer teamId={this.props.team.id}/>
+        <ChannelIndexContainer teamId={team.id} channelId={channelId}/>
         <Link to="/newChannel"><button>New Channel</button></Link>
         {/* <DirectIndexContainer/> */}
 

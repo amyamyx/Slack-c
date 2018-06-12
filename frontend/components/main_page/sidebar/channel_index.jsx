@@ -1,5 +1,6 @@
 import React from 'react';
 import ChannelIndexItem from './channel_index_item';
+import { Link } from 'react-router-dom';
 
 class ChannelIndex extends React.Component{
   constructor(props){
@@ -11,10 +12,13 @@ class ChannelIndex extends React.Component{
   }
 
   render() {
+    const { channels, channelId } = this.props;
     return (
       <div className="sidebar-channel-index">
-        {this.props.channels.map((channel, idx) => (
-          <ChannelIndexItem key={idx} channel={channel}/>
+        {channels.map((channel, idx) => (
+          <Link className="item-link" to={`/channels/${channel.id}`} key={idx}>
+            <ChannelIndexItem channel={channel} channelId={channelId}/>
+          </Link>
         ))}
       </div>
     )

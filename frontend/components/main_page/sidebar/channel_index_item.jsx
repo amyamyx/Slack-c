@@ -1,12 +1,21 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const ChannelIndexItem = (props) => (
-  <div className="channel-index-item">
-    <Link className="item-link" to={`/channels/${props.channel.id}`}>
+const ChannelIndexItem = (props) => {
+  const { channel, channelId } = props;
+
+  let classes;
+  if (channel.id == channelId) {
+    classes = 'channel-index-item highlight';
+  } else {
+    classes = 'channel-index-item';
+  }
+  
+  return (
+    <div className={ classes }>
       <span> # {props.channel.name}</span>
-    </Link>
-  </div>
-)
+    </div>
+  )
+}
 
 export default ChannelIndexItem;
