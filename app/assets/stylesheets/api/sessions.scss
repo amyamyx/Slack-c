@@ -1,39 +1,16 @@
 #session-form {
   border: 3px solid #000000;
-  // border-top: 
   width: 900px;
   margin: auto;
-  position: absolute;
-  top: 200px;
-  left: 250px;
+  // position: absolute;
+  // left: 250px;
+  margin: auto;
+  margin-top: 100px;
   border-radius: 15px;
 }
 
 #session-form h1 {
   text-align: center;
-}
-
-.session-input {
-  height: 40px;
-  width: 500px;
-  margin: 0 20%;
-  margin-top: 20px;
-  font-size: 24px;
-  padding-left: 20px;
-  border-radius: 10px;
-
-}
-
-.session-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: #008952;
-  font-size: 20px;
-  color: #fff;
-  padding: 10px 50px;
-  margin: 20px 40%;
-  border-radius: 10px;
-
 }
 
 .session-form{
@@ -43,4 +20,51 @@
 .session-errors{
   position: absolute;
 }
+.session-input {
+  border: 0;
+  height: 40px;
+  width: 500px;
+  border: 2px solid #ccc;
+  margin: 0 20%;
+  margin-top: 20px;
+  font-size: 24px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
 
+.buttons {
+  display: flex;
+  margin: 20px 40%;
+  // background: tomato;
+  width: 300px;
+}
+
+.session-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: none;
+  background-color: #008952;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.session-button:hover {
+  background-color: #016b41;
+}
+
+.demo-login {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-decoration: underline;
+  font-size: 14px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
