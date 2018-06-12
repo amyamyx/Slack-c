@@ -22,7 +22,7 @@ class SessionForm extends React.Component {
   }
 
   handleClick(e) {
-    this.props.login({username: "tofu", password: "asdfjkl"})
+    this.props.login({username: "tommy", password: "asdfjkl"})
   }
 
   renderErrors() {
