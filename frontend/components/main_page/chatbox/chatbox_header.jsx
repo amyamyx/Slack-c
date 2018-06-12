@@ -1,16 +1,41 @@
 import React from 'react';
 
 const ChatboxHeader = (props) => {
-  if (!props.channel) {
+  const { 
+    modal,
+    channel,
+    openModal,
+    currentId,
+    channelMembers,
+    deleteChannel 
+  } = props;
+
+  // debugger;
+  
+  if (!channel) {
     return null;
   }
   
+  const handleClick = (e) => {
+    if (modal) { openModal(modal) }
+  }
+
+  let button;
+  if (currentId === channel.creatorId) {
+    button = (
+      <button onClick={() => deleteChannel(channel.id)}>delete channel</button>
+    )
+  } else {
+    button = (
+      <div></div>
+    );
+  }
   return (
   <div className="chatbox-header">
     
     <div className="chatbox-header-left">
       <h3> # {props.channel.name} </h3>
-      <h5 className="header-member">
+      <h5 className="header-member" onClick={(e) => handleClick(e)}>
         <i className="far fa-user"></i> 
           {` ${props.channelMembers.length}` }
       </h5>
@@ -18,7 +43,7 @@ const ChatboxHeader = (props) => {
 
     <div className="chatbox-header-right">
       {/* // Todo */}
-      <button>delete channel</button>
+      { button }
       <div className="info-circle icon">
         <img className="info-circle-icon" src="https://png.pngtree.com/element_our/md/20180314/md_5aa8fceea1b8e.png"/>
       </div>

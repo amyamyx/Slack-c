@@ -1,5 +1,6 @@
 json.channel do
   json.partial! @channel
+  json.extract! @channel, :creator_id
 end
 
 json.messages do 
