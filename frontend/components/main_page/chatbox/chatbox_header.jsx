@@ -10,7 +10,10 @@ const ChatboxHeader = (props) => {
     
     <div className="chatbox-header-left">
       <h3> # {props.channel.name} </h3>
-      <h5 className="header-member"><i className="far fa-user"></i> 2,290</h5>
+      <h5 className="header-member">
+        <i className="far fa-user"></i> 
+          {` ${props.channelMembers.length}` }
+      </h5>
     </div>
 
     <div className="chatbox-header-right">
