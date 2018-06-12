@@ -14,7 +14,10 @@ const Home = () => (
       <div className="main-text">
         <h1>Where Work </h1>
         <h1 className="second">Happens</h1>
-        <p>When your team needs to kick off a project, hire a new employee, deploy some code, review a sales contract, finalize next year's budget, measure an A/B test, plan your next office opening, and more, Slack has you covered.</p>
+        <p>When your team needs to kick off a project, hire a new employee, deploy
+           some code, review a sales contract, finalize next year's budget, measure
+            an A/B test, plan your next office opening, and more, Slack has you
+            covered.</p>
         <form>
           {/* <input type="text" placeholder="Email address" value=""/> */}
           <Link to="/signup">

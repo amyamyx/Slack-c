@@ -134,10 +134,10 @@ header {
 .section-one {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .main-img img {
-  display: inline-block;
   height: 60%;
   margin-left: 50px;
   width: auto;
@@ -145,10 +145,11 @@ header {
 }
 
 .main-text {
-  display: inline-block;
   margin-top: 20px;
   margin-left: -80px;
   padding-right: 35px;
+  position:absolute;
+  left: 722px;
 }
 
 .main-text h1 {
@@ -156,6 +157,10 @@ header {
   font-family: serif;
   color: #323747;
   font-weight: 700;
+}
+
+.main-text p {
+  flex-wrap: wrap;
 }
 
 .second {
