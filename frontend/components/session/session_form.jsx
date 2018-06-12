@@ -35,8 +35,8 @@ class SessionForm extends React.Component {
       <div>
         <HeaderContainer />
         <div id="session-form" className="group">
-          <form onSubmit={this.handleSubmit}>
-            <h3>{this.renderErrors()}</h3>
+          <form onSubmit={this.handleSubmit} className="session-form">
+            <h3 className="session-errors">{this.renderErrors()}</h3>
             <h1>{this.props.formType}</h1>
             <input
               type="text"
