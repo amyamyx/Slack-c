@@ -10,7 +10,7 @@ class Chatbox extends React.Component {
   }
   componentDidMount(){
     this.props.fetchChannel(this.props.channelId)
-    this.props.fetchUsers();
+              .then(this.props.fetchUsers());
   }
   
   componentWillReceiveProps(nextProps){
