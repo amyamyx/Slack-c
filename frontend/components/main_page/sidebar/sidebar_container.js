@@ -4,12 +4,9 @@ import { logout } from '../../../actions/session_actions';
 import { closeModal } from '../../../actions/modal_actions';
 
 const msp = (state, ownProps) => {
-  // debugger;
-  return{
-  team: {name: "Ape Academy", id: 1, creator_id: 1},
-  currentUser: state.entities.users[state.session.id],
-  channelId: ownProps.channelId
-}}
+  const { currentUser, team, channelId } = ownProps
+  return { currentUser, team, channelId };
+}
 
 const mdp = dispatch => ({
   logout: () => dispatch(logout()),

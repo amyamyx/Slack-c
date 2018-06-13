@@ -1,18 +1,17 @@
 import { connect } from 'react-redux';
+import { merge } from 'lodash';
 import ChannelIndex from './channel_index';
-import { fetchChannels } from '../../../actions/channel_actions';
+import { fetchJoinedChannels } from '../../../actions/channel_actions';
+
 const msp = (state, ownProps) => {
   // debugger;
-  return ({
-    teamId: ownProps.teamId,
-    channels: Object.values(state.entities.channels),
-    channelId: ownProps.channelId
-  })
+  const joinedChannels = Object.values(state.entities.joinedChannels);
+  const props = merge({}, ownProps, { joinedChannels } )
+  return props;
 }
-
-
+ 
 const mdp = dispatch => ({
-  fetchChannels: teamId => dispatch(fetchChannels(teamId))
+  fetchJoinedChannels: (teamId, userId) => dispatch(fetchJoinedChannels(teamId, userId))
 })
 
 export default connect(

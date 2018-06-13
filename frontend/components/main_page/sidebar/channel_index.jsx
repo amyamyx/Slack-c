@@ -8,14 +8,16 @@ class ChannelIndex extends React.Component{
   }
 
   componentDidMount(){
-    this.props.fetchChannels(this.props.teamId);
+    const { currentUser, teamId } = this.props;
+    this.props.fetchJoinedChannels(teamId, currentUser.id);
   }
 
   render() {
-    const { channels, channelId } = this.props;
+    const { joinedChannels, channelId } = this.props;
+    console.log("joinedchannels", joinedChannels);
     return (
       <div className="sidebar-channel-index">
-        {channels.map((channel, idx) => (
+        {joinedChannels.map((channel, idx) => (
           <Link className="item-link" to={`/channels/${channel.id}`} key={idx}>
             <ChannelIndexItem channel={channel} channelId={channelId}/>
           </Link>

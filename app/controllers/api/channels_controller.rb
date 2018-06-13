@@ -3,6 +3,12 @@ class Api::ChannelsController < ApplicationController
     @channels = Team.find(params[:team_id]).channels
   end
 
+  def joined_index
+    user = User.find(params[:user_id])
+    @channels = user.channels.where(team_id: params[:team_id])
+    render :index
+  end
+
   def create
     # creator_id, team_id
     @channel = Channel.new(channel_params)
