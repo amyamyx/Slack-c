@@ -27,6 +27,7 @@ class ChannelForm extends React.Component {
   }
 
   handleClick(e) {
+    e.preventDefault();
     this.props.history.go(-1);
   }
 
@@ -58,7 +59,7 @@ class ChannelForm extends React.Component {
         <h2>Create a <span className={`private ${this.privateVisible}`}>private</span> channel</h2>
         <p>Channels are where your members communicate. They're best when organized around a topic -- #leads, for example.</p>
 
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <div className="channel-form-switch">
             <label className="switch">
               <input type="checkbox" 
@@ -106,7 +107,7 @@ class ChannelForm extends React.Component {
             />
           </div>
           <button onClick={this.handleClick}>Cancel</button>
-          <button type="submit">Create Channel</button>
+          <button onClick={this.handleSubmit}>Create Channel</button>
         </form>
       </div>
     )
