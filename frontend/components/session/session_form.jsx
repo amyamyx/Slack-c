@@ -22,6 +22,7 @@ class SessionForm extends React.Component {
   }
 
   handleClick(e) {
+    e.preventDefault();
     this.props.login({username: "tommy", password: "asdfjkl"})
   }
 
