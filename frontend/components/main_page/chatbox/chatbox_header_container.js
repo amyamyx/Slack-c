@@ -4,7 +4,6 @@ import { deleteChannel } from '../../../actions/channel_actions';
 import { openModal } from '../../../actions/modal_actions';
 
 const msp = (state, ownProps) => {
-  // debugger
   return {
     channel: state.entities.channels[ownProps.channelId],
     channelMembers: Object.values(state.entities.channelMembers),

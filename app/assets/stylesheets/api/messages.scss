@@ -8,16 +8,14 @@
 .chatbox-header {
   display: flex;
   justify-content: space-between;
-  // background: peachpuff;
-  // width: 100%;
   height: 10%;
   margin: 0;
-  // background: peachpuff;
 }
 
 .info-circle-icon {
   width: 20px;
   height: auto;
+  cursor: pointer;
 }
 
 .chatbox-header-left {
@@ -34,6 +32,7 @@
   margin-top: -15px;
   font-weight: 300;
   color: #818284;
+  cursor:pointer;
 }
 
 .chatbox-header-right {
@@ -147,10 +146,10 @@
 
 
 .fa-plus {
-  border: 2px solid #717274;
+  border: 2px solid #b2b2b3;
   border-right: none;
   background: white;
-  color: 2px solid #717274;
+  color: 2px solid #b2b2b3;
   padding: 11px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -160,18 +159,19 @@
   // -moz-appearance: none;
   border: transparent;
   height: 22px;
-  width: 700px;
+  width: 670px;
   box-shadow:none;
   padding: 8px;
   font-size: 14px;
   resize: none;
-  border: 2px solid #717274;
+  border: 2px solid #b2b2b3;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .message-form textarea:focus {
-  outline: none;
+  outline:none;
+  border: 2px solid #717274;
 }
 
 .message-form textarea::-webkit-input-placeholder {

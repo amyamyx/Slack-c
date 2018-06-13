@@ -16,10 +16,6 @@ const ChatboxHeader = (props) => {
     return null;
   }
   
-  const handleClick = (e) => {
-    openModal("channel")
-  }
-
   let button;
   if (currentId === channel.creatorId) {
     button = (
@@ -35,7 +31,7 @@ const ChatboxHeader = (props) => {
     
     <div className="chatbox-header-left">
       <h3> # {props.channel.name} </h3>
-      <h5 className="header-member" onClick={(e) => handleClick(e)}>
+        <h5 className="header-member" onClick={() => openModal("channel")}>
         <i className="far fa-user"></i> 
           {` ${props.channelMembers.length}` }
       </h5>
@@ -43,7 +39,7 @@ const ChatboxHeader = (props) => {
 
     <div className="chatbox-header-right">
       { button }
-      <div className="info-circle icon" onClick={(e)=>handleClick(e)}>
+        <div className="info-circle icon" onClick={() => openModal("channel")}>
         <img className="info-circle-icon" src="https://png.pngtree.com/element_our/md/20180314/md_5aa8fceea1b8e.png"/>
       </div>
 
