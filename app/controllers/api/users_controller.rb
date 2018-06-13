@@ -6,6 +6,8 @@ class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      @channel = Team.find(1).channels.find_by_name("general")
+      ChannelMembership.create(user_id: @user.id, channel_id: @channel.id)
       login(@user)
       render :show
     else

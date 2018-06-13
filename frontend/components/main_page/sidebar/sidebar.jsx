@@ -14,7 +14,7 @@ class Sidebar extends React.Component {
   }
   
   render(){
-    const { team, channelId, currentUser, logout } = this.props;
+    const { team, channelId, currentUser, logout, closeModal } = this.props;
     return (
       <div className="sidebar">
         {/* <TeamIndexContainer/> */}
@@ -26,7 +26,7 @@ class Sidebar extends React.Component {
         />
 
         <ChannelIndexContainer teamId={team.id} channelId={channelId}/>
-        <Link to="/newChannel"><button>New Channel</button></Link>
+        <Link to="/newChannel" onClick={closeModal}><button>New Channel</button></Link>
         {/* <DirectIndexContainer/> */}
 
         <ul>
