@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import Sidebar from './sidebar';
 import { logout } from '../../../actions/session_actions';
-import { closeModal } from '../../../actions/modal_actions';
 
 const msp = (state, ownProps) => {
   const { currentUser, team, channelId } = ownProps
@@ -9,8 +8,7 @@ const msp = (state, ownProps) => {
 }
 
 const mdp = dispatch => ({
-  logout: () => dispatch(logout()),
-  closeModal: () => dispatch(closeModal())
+  logout: () => dispatch(logout())
 })
 
 export default connect(msp, mdp)(Sidebar);

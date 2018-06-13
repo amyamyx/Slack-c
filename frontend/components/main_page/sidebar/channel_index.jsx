@@ -13,8 +13,7 @@ class ChannelIndex extends React.Component{
   }
 
   render() {
-    const { joinedChannels, channelId } = this.props;
-    console.log("joinedchannels", joinedChannels);
+    const { joinedChannels, channelId, closeModal } = this.props;
     return (
       <div className="sidebar-channel-index">
         {joinedChannels.map((channel, idx) => (
@@ -22,6 +21,8 @@ class ChannelIndex extends React.Component{
             <ChannelIndexItem channel={channel} channelId={channelId}/>
           </Link>
         ))}
+        <Link to="/newChannel" onClick={closeModal} ><button>New Channel</button></Link>
+        {/* <Link to="/channels" params={joinedChannels}><button>Join Channels</button></Link> */}
       </div>
     )
   }
