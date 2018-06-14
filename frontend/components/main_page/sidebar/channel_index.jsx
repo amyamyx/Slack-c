@@ -30,6 +30,7 @@ class ChannelIndex extends React.Component{
     console.log("render", joinedChannels)
     return (
       <div className="sidebar-channel-index">
+        <h4>Channels</h4>
         {joinedChannels.map((channel, idx) => (
           <Link className="item-link" to={`/channels/${channel.id}`} key={idx} onClick={() => this.handleModalProps(channel.id)}>
             <ChannelIndexItem channel={channel} channelId={channelId} />
