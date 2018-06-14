@@ -12,6 +12,10 @@ const ChatboxHeader = (props) => {
 
   // debugger;
   
+  const handleDelete = (e) => {
+    deleteChannel(channel.id).then(() => props.history.push('/channels/1'))
+  }
+
   if (!channel) {
     return null;
   }
@@ -19,7 +23,7 @@ const ChatboxHeader = (props) => {
   let button;
   if (currentId === channel.creatorId) {
     button = (
-      <button onClick={() => deleteChannel(channel.id)}>delete channel</button>
+      <button onClick={(e) => handleDelete(e)}>delete channel</button>
     )
   } else {
     button = (

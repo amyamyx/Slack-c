@@ -22,7 +22,10 @@ class ChannelIndex extends React.Component{
           </Link>
         ))}
         <Link to="/newChannel" onClick={closeModal} ><button>New Channel</button></Link>
-        {/* <Link to="/channels" params={joinedChannels}><button>Join Channels</button></Link> */}
+        <Link to={{
+          pathname: '/channels',
+          state: { joinedChannels }
+        }}><button>Join Channels</button></Link>
       </div>
     )
   }
