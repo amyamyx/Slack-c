@@ -4,7 +4,7 @@ import SidebarHeader from './sidebar_header';
 // import TeamIndexContainer from './team_index_container';
 import ChannelIndexContainer from './channel_index_container';
 // import DirectIndexContainer from './direct_index_container';
-
+import Modal from '../../modal/modal';
 
 class Sidebar extends React.Component {
   constructor(props){
@@ -35,6 +35,7 @@ class Sidebar extends React.Component {
           channelId={channelId}
           currentUser={currentUser}
         />
+        {/* <Modal channelId={channelId} /> */}
         {/* <DirectIndexContainer/> */}
 
         <ul>

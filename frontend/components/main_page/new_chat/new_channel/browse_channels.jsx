@@ -1,8 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { fetchChannels } from '../../../../actions/channel_actions';
-import { createChannelMembership } from '../../../../actions/channe_membership_actions';
-// import { Link } 
+import { Link, withRouter } from 'react-router-dom';
 
 class BrowseChannels extends React.Component {
   constructor(props) {
@@ -27,33 +24,39 @@ class BrowseChannels extends React.Component {
     return filtered;
   }
 
-  createChannel(e) {
-    this.props.history.push('/newChannel');
-  }
-
   handleClick(channelId) {
-    const { history, currentUser, createChannelMembership } = this.props;
+    const { history, currentUser, createChannelMembership, closeModal,fetchJoinedChannels } = this.props;
     return (e) => {
       createChannelMembership(channelId, currentUser.id)
-        .then(() => history.push(`/channels/${channelId}`))
-    }
-  }
-
-  handleClickJoined(channelId) {
-    return (e) => {
-      this.props.history.push(`/channels/${channelId}`)
+        .then(() =>{ 
+          history.push(`/channels/${channelId}`)
+          fetchJoinedChannels(1, currentUser.id)
+          closeModal();
+        })
     }
   }
 
   render() {
-    const { channels, currentUser, joinedChannels, createChannelMembership } = this.props;
+    const { channels, joinedChannels, closeModal } = this.props;
     const joinableChannels = this.filterChannels(channels);
+
     return (
       <div className="browse-channels">
+        {/* close button */}
+        <button className="esc-btn" onClick={closeModal}>
+          <span className="x">X</span>
+          <br />
+          <span>esc</span>
+        </button>
+
+        {/* title */}
         <div>
           <h2>Browse channels</h2>
-          <button onClick={(e) => this.createChannel(e)}>Create Channel</button>
+          <Link to="/newChannel"><button onClick={closeModal}>Create Channel</button></Link>
         </div>
+
+        {/* list of unjoined channels */}
+        <h3> joinable channels</h3>
         <ul className="joinable-channel-index">
         {joinableChannels.map( channel => (
           <li 
@@ -64,15 +67,19 @@ class BrowseChannels extends React.Component {
             {`# ${channel.name}`}
           </li>
         ))}
-        </ul>
 
+        {/* list of joined channels */}
+        </ul>
+        <h3> joined channels</h3>
         <ul className="joined-channel-index">
           {joinedChannels.map( channel => (
             <li
               key={channel.id}
               className="joined-channel"
-              onClick={this.handleClickJoined(channel.id)}>
-              {`# ${channel.name}`}
+              onClick={closeModal}>
+              <Link to={`/channels/${channel.id}`}>
+                {`# ${channel.name}`}
+              </Link>
             </li> 
           ))}
         </ul>
@@ -81,22 +88,4 @@ class BrowseChannels extends React.Component {
   }
 }
 
-const msp = (state, ownProps) => {
-  const defaultChannels = new Array();
-  const channels = Object.values(state.entities.channels) || defaultChannels;
-  return { 
-    currentUser: state.entities.users[state.session.id],
-    joinedChannels: ownProps.location.state.joinedChannels, 
-    channels
-  }
-}
-
-
-const mdp = dispatch => ({
-  createChannelMembership: (channelId, userId) => dispatch(createChannelMembership(channelId, userId)),
-  fetchChannels: teamId => dispatch(fetchChannels(teamId))
-})
-
-export default connect(
-  msp, mdp
-)(BrowseChannels);
+export default withRouter(BrowseChannels);

@@ -3,7 +3,7 @@ import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
-// import Modal from './modal/modal';
+import Modal from './modal/modal';
 import Home from './welcome_page/home'
 import MainPage from './main_page/main_page';
 import BrowseChannels from './main_page/new_chat/new_channel/browse_channels';
@@ -14,7 +14,7 @@ import ChannelFormContainer from './main_page/new_chat/new_channel/channel_form_
 
 const App = () => (
   <div id="app">
-    {/* <Modal /> */}
+    <Modal />
 
     <Switch>
       <AuthRoute path="/signup" exact component={SignupContainer} />
