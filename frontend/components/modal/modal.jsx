@@ -1,18 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import { closeModal } from '../../actions/modal_actions';
+
+import BrowseChannelsContainer from '../main_page/new_chat/new_channel/browse_channels_container';
 import ChannelMemberContainer from '../main_page/chatbox/channel_member_container';
 
-const msp = (state, ownProps) => ({
-  modal: state.ui.modal,
-  channelId: ownProps.channelId
-})
 
-const mdp = dispatch => ({
-  closeModal: () => dispatch(closeModal())
-})
-
-const Modal = ({ modal, closeModal, channelId }) => {
+const Modal = ({modal, closeModal}) => {
   if (!modal) {
     return null
   };
@@ -20,7 +14,10 @@ const Modal = ({ modal, closeModal, channelId }) => {
   let component;
   switch (modal) {
     case 'channel':
-      component = (<ChannelMemberContainer channelId={channelId}/>);
+      component = (<ChannelMemberContainer/>);
+      break;
+    case 'joinChannel':
+      component = (<BrowseChannelsContainer/>)
       break;
     // case 'direct':
     //   component = <DirectMemberContainer/>;
@@ -30,13 +27,20 @@ const Modal = ({ modal, closeModal, channelId }) => {
   }
 
   return (
-    <div className="modal-background">
-      <div className="modal-child">
-        {component}
-      </div>
+    <div className="modal">
+      {component}
     </div>
   )
 }
+
+const msp = state => ({
+  modal: state.ui.modal,
+  ownProps: state.ui.props
+})
+
+const mdp = dispatch => ({
+  closeModal: () => dispatch(closeModal())
+})
 
 export default connect(
   msp, mdp

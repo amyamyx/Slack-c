@@ -16,6 +16,11 @@ const ChatboxHeader = (props) => {
     deleteChannel(channel.id).then(() => props.history.push('/channels/1'))
   }
 
+  const handleClick = () => {
+    props.openModal("channel");
+    props.receiveProps(channel.id);
+  }
+
   if (!channel) {
     return null;
   }
@@ -35,7 +40,7 @@ const ChatboxHeader = (props) => {
     
     <div className="chatbox-header-left">
       <h3> # {props.channel.name} </h3>
-        <h5 className="header-member" onClick={() => openModal("channel")}>
+        <h5 className="header-member" onClick={handleClick}>
         <i className="far fa-user"></i> 
           {` ${props.channelMembers.length}` }
       </h5>
@@ -43,7 +48,7 @@ const ChatboxHeader = (props) => {
 
     <div className="chatbox-header-right">
       { button }
-        <div className="info-circle icon" onClick={() => openModal("channel")}>
+        <div className="info-circle icon" onClick={handleClick}>
         <img className="info-circle-icon" src="https://png.pngtree.com/element_our/md/20180314/md_5aa8fceea1b8e.png"/>
       </div>
 

@@ -6,7 +6,6 @@ const MemberIndex = (props) => {
   let plural = members.length === 1 ? "Member" : "Members"
   return (
     <div className="member-index">
-
       <div className="member-index-header">
         {/* @Todo */}
         <h3> About # {channel.name} </h3>

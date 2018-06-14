@@ -9,19 +9,16 @@
 
 }
 
-.modal-child {
+.member-index {
   position: absolute;
   right: 0;
-  margin-top: -630px;
+  z-index: 10;
+  margin-top: 70px;
   width: 300px;
-  height: 630px;
+  height: 600px;
   border-left: 1px solid #e8e8e8;
   // background: peachpuff;
 //  transform: translate(-50%, -50%);
-}
-
-.member-index {
-  max-height: 100%;
 }
 
 .member-index-header {
@@ -87,7 +84,7 @@
 
 .member-index-list {
   margin-top: 10px;
-  height: 420px;
+  height: 400px;
   background: white;
   overflow: scroll;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import ChatboxHeaderContainer from './chatbox_header_container';
 import MessageFormContainer from './message_form_container';
 import MessageIndexContainer from './message_index_container';
-import Modal from '../../modal/modal';
+// import MemberModalContainer from '../../modal/member_modal_container';
 
 class Chatbox extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class Chatbox extends React.Component {
         
         <MessageIndexContainer channelId={channelId}/>
         <MessageFormContainer channelId={channelId} />
-        <Modal channelId={channelId}/>
+        {/* <MemberModalContainer channelId={channelId}/> */}
       </div>
     )
   }

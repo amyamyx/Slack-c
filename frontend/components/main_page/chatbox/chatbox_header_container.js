@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import ChatboxHeader from './chatbox_header';
 import { deleteChannel } from '../../../actions/channel_actions';
 import { openModal } from '../../../actions/modal_actions';
+import { receiveProps } from '../../../actions/ui_props_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -14,7 +15,8 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => ({
   deleteChannel: channelId => dispatch(deleteChannel(channelId)),
-  openModal: modal => dispatch(openModal(modal))
+  openModal: modal => dispatch(openModal(modal)),
+  receiveProps: obj => dispatch(receiveProps(obj))
 })
 
 
