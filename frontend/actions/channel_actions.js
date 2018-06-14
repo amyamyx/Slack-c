@@ -40,7 +40,7 @@ const receiveAllChannels = payload => ({
   payload
 })
 
-const receiveChannel = payload => ({
+export const receiveChannel = payload => ({
   type: RECEIVE_CHANNEL,
   payload
 })

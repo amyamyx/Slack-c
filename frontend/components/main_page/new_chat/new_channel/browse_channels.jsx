@@ -27,7 +27,15 @@ class BrowseChannels extends React.Component {
     return filtered;
   }
 
-  handleClickJoined (channelId) {
+  handleClick(channelId) {
+    const { history, currentUser, createChannelMembership } = this.props;
+    return (e) => {
+      createChannelMembership(channelId, currentUser.id)
+        .then(() => history.push(`/channels/${channelId}`))
+    }
+  }
+
+  handleClickJoined(channelId) {
     return (e) => {
       this.props.history.push(`/channels/${channelId}`)
     }
@@ -38,18 +46,19 @@ class BrowseChannels extends React.Component {
     const joinableChannels = this.filterChannels(channels);
     return (
       <div>
-        <ul>
+        <ul className="joinable-channel-index">
         {joinableChannels.map( channel => (
           <li 
             key={channel.id}
             className="joinable-channel"
-            onClick={() => createChannelMembership(channel.id, currentUser.id)} >
+            onClick={this.handleClick(channel.id)}
+          >
             {`# ${channel.name}`}
           </li>
         ))}
         </ul>
 
-        <ul>
+        <ul className="joined-channel-index">
           {joinedChannels.map( channel => (
             <li
               key={channel.id}
