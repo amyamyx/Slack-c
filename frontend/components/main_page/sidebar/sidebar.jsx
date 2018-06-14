@@ -27,6 +27,7 @@ class Sidebar extends React.Component {
         <SidebarHeader 
           team={team} 
           currentUser={currentUser} 
+          closeModal={closeModal}
           logout={logout}
         />
 

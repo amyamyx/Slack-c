@@ -26,7 +26,7 @@ class MainPage extends React.Component {
 
 const msp = (state, ownProps) => {
   const defaultUser = {id: "", username: ""};
-  const currentUser = state.entities.users[state.session.id];
+  const currentUser = state.entities.users[state.session.id] || defaultUser;
   const channelId = ownProps.match.params.channelId;
 
   return {
