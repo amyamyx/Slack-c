@@ -33,9 +33,9 @@ class Sidebar extends React.Component {
             <h3 className="team-name">{team.name}</h3>
             <button onClick={() => this.handleClick()} className="logout">logout</button>
           </div>
-          {/* <div className="sidebar-user-div"> */}
-            <span className="sidebar-user">hey, {currentUser.username}</span>
-          {/* </div> */}
+          <div className="sidebar-user">
+            <span>hey, {currentUser.username}</span>
+          </div>
         </div>
 
         <div className="sidebar-body">

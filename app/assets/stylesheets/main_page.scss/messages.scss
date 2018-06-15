@@ -14,12 +14,6 @@
   border-bottom: 1px solid #eee;
 }
 
-.info-circle-icon {
-  width: 20px;
-  height: auto;
-  cursor: pointer;
-}
-
 .chatbox-header-left {
   padding-left: 20px;
   margin-top: -10px;
@@ -43,13 +37,24 @@
   margin-right: 30px;
 }
 .chatbox-header-right .icon {
-  margin-right: 20px;
-  margin-top: 10px;
+  font-size: 18px;
+  color: #717274;
+}
+
+.info-circle{
+  margin-top: 5px;
+  margin-right: 3px;
+}
+
+.cog {
+  margin-top: 6px;
+  margin-right: 15px;
 }
 .chatbox-header-search {
   display: flex;
   border: 1px solid #919193;
   border-radius: 5px;
+  // margin-left: 5px;
   height: 35px;
   text-align: center;
   color: #717274;

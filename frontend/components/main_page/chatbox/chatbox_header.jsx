@@ -48,12 +48,12 @@ const ChatboxHeader = (props) => {
 
     <div className="chatbox-header-right">
       { button }
-        <div className="info-circle icon" onClick={handleClick}>
-        <img className="info-circle-icon" src="https://png.pngtree.com/element_our/md/20180314/md_5aa8fceea1b8e.png"/>
+      <div className="info-circle icon" onClick={handleClick}>
+        <i className="fal fa-info-circle info-circle-icon"></i>
       </div>
 
       <div className="cog icon">
-        <i className="fas fa-cog"></i>
+        <i className="fal fa-cog"></i>
       </div>
       
       <div className="chatbox-header-search">

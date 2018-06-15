@@ -22,7 +22,7 @@
 
 .sidebar-header {
   padding-left: 20px;
-  line-height: 0.5em;
+  line-height: 1em;
 }
 
 .sidebar-header-div {
@@ -33,11 +33,11 @@
 }
 
 .sidebar-user {
+  margin-top: -10px;
   font-size: 14px;
 }
 
 .logout {
-  position: absolute;
   right: 8px;
   top: 13px;
   padding: 5px 10px;
@@ -50,6 +50,10 @@
 
 .logout:hover {
   background: #352133;
+}
+
+.logout:focus {
+  outline: none;
 }
 
 .sidebar-body {

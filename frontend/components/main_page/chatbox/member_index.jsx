@@ -14,7 +14,7 @@ const MemberIndex = (props) => {
 
       <div className="member-index-info">
         <div className="member-index-info-left">
-          <img className="info-circle-icon" src="https://png.pngtree.com/element_our/md/20180314/md_5aa8fceea1b8e.png" />
+          <i className="fal fa-info-circle info-circle-icon"></i>
           <span className="channel-detail"> Channel Details</span>
         </div>
       </div>
