@@ -30,8 +30,14 @@ branson = User.create(username: "richbranson", password: "virgin")
 barb = User.create(username: "barbara999", password: "asdfjkl")
 
 
-team1 = Team.create(name: "Ape Academy", creator_id: tofu.id)
+team1 = Team.create(name: "Appp Academy", creator_id: tofu.id)
 team2 = Team.create(name: "team2", creator_id: tommy.id)
+
+general = Channel.where(team_id: team1.id).find_by(name: "general")
+
+(2...21).each do |id|
+  ChannelMembership.create(channel_id: 1, user_id: id)
+end
 
 channel1 = Channel.create(name: "leads", team_id: team1.id, creator_id: tofu.id)
 channel2 = Channel.create(name: "marketing", team_id: team1.id, creator_id: chou.id)
