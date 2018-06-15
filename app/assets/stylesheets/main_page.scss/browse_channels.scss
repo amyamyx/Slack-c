@@ -123,12 +123,12 @@
   border-bottom: 1px solid #e8e8e8;
 }
 
-::-webkit-scrollbar {
+.all-channels::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 7px;
 }
 
-::-webkit-scrollbar-thumb {
+.all-channels::-webkit-scrollbar-thumb {
     border-radius: 4px;
     background-color: #d9d9de;
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
