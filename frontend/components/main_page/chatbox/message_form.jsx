@@ -31,14 +31,16 @@ class MessageForm extends React.Component {
 
     return (
       <div className="message-form">
-        <div className="plus-icon"><i className="fas fa-plus"></i></div>
         <form onSubmit={this.handleSubmit}>
-          <textarea
-            value={this.state.content}
-            onChange={this.handleInput}
-            onKeyPress={this.handleKeyPress}
-            placeholder={`Message # ${this.props.channel}`}
-          />
+          <div className="form-input">
+            <div className="plus-icon"><i className="fal fa-plus"></i></div>
+            <textarea
+              value={this.state.content}
+              onChange={this.handleInput}
+              onKeyPress={this.handleKeyPress}
+              placeholder={`Message # ${this.props.channel}`}
+            />
+          </div>
         </form>
       </div>
     )

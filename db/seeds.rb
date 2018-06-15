@@ -19,7 +19,6 @@ karen = User.create(username: "karen337", password: "asdfjkl")
 harry = User.create(username: "harry", password: "qwerasdf")
 tiff = User.create(username: "tiff", password: "asdfjkl")
 jason = User.create(username: "jasonjson", password: "jbuilder")
-trump = User.create(username: "@realDonaldTrump", password: "youarefired")
 jimmy = User.create(username: "jkimmel", password: "runoutoftime")
 damon = User.create(username: "mdamon", password: "benisbf")
 walter = User.create(username: "waltermitty", password: "majortom")
@@ -28,6 +27,7 @@ jess = User.create(username: "jessicachen", password: "justjessica")
 face = User.create(username: "happyface123", password: "iamhappy")
 branson = User.create(username: "richbranson", password: "virgin")
 barb = User.create(username: "barbara999", password: "asdfjkl")
+elon = User.create(username: "elonmusk", password: "teslaisdope")
 
 
 team1 = Team.create(name: "Appp Academy", creator_id: tofu.id)
@@ -73,3 +73,29 @@ direct3 = Direct.create(team_id: 1)
 direct4 = Direct.create(team_id: 1)
 direct5 = Direct.create(team_id: 1)
 direct6 = Direct.create(team_id: 1)
+
+DirectMembership.create(direct_id: direct1.id, user_id: tommy.id)
+DirectMembership.create(direct_id: direct1.id, user_id: tofu.id)
+
+DirectMembership.create(direct_id: direct2.id, user_id: tommy.id)
+DirectMembership.create(direct_id: direct2.id, user_id: tofu.id)
+DirectMembership.create(direct_id: direct2.id, user_id: jess.id)
+DirectMembership.create(direct_id: direct2.id, user_id: jason.id)
+
+DirectMembership.create(direct_id: direct3.id, user_id: elon.id)
+DirectMembership.create(direct_id: direct3.id, user_id: branson.id)
+DirectMembership.create(direct_id: direct3.id, user_id: victor.id)
+DirectMembership.create(direct_id: direct3.id, user_id: tommy.id)
+
+DirectMembership.create(direct_id: direct4.id, user_id: tommy.id)
+DirectMembership.create(direct_id: direct4.id, user_id: david.id)
+
+DirectMembership.create(direct_id: direct5.id, user_id: tommy.id)
+DirectMembership.create(direct_id: direct5.id, user_id: barb.id)
+
+DirectMembership.create(direct_id: direct6.id, user_id: tiff.id)
+DirectMembership.create(direct_id: direct6.id, user_id: tofu.id)
+
+Message.create(messageable_type: "Channel", messageable_id: general.id, user_id: tofu.id, content: "Hello, welcome to our team! I am the administrator of this channel.")
+Message.create(messageable_type: "Channel", messageable_id: general.id, user_id: chou.id, content: "Hi, everyone! I am Steven Chou.I am in the Marketing department. Please contact me or post in the #marketing channel if having marketing-related ideas")
+Message.create(messageable_type: "Channel", messageable_id: general.id, user_id: elon.id, content: "Greetings.")

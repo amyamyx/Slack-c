@@ -57,7 +57,7 @@ const ChatboxHeader = (props) => {
       </div>
       
       <div className="chatbox-header-search">
-        <div className="search-icon"><i className="fas fa-search"></i></div>
+        <div className="search-icon"><i className="far fa-search"></i></div>
         <input type="search" placeholder="Search"/>
       </div>
 

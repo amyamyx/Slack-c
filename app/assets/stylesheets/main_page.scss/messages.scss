@@ -92,10 +92,21 @@
   border-bottom-right-radius: 5px;
 }
 
+.form-input {
+  display: flex;
+}
+
 .message-form textarea:focus {
   outline:none;
   border: 2px solid #717274;
+  .form-input {
+    border: 2px solid #717274;
+  }
 }
+
+// textarea:focus + .form-input {
+//   border: 2px solid #717274;
+// }
 
 .message-form textarea::-webkit-input-placeholder {
   color: #b2b2b2;
