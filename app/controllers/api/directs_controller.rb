@@ -1,10 +1,9 @@
 class Api::DirectsController < ApplicationController
   def index
-    @directs = current_user.directs.where(team_id: params[:team_id])
+    @directs = current_user.directs
+      .where(team_id: params[:team_id])
   end
   
-  
-
   def create
     @direct = Direct.new(team_id: params[:team_id])
 
@@ -18,6 +17,7 @@ class Api::DirectsController < ApplicationController
 
   def show
     @direct = Direct.find(params[:id])
+    @membership = current_user.direct_memberships.find_by_direct_id(@direct.id)
   end
 
   private

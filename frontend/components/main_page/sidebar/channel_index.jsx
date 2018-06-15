@@ -27,7 +27,6 @@ class ChannelIndex extends React.Component{
 
   render() {
     const { joinedChannels, channelId, closeModal, openModal } = this.props;
-    console.log("render", joinedChannels)
     return (
       <div className="sidebar-channel-index">
         <h4>Channels</h4>

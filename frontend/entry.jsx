@@ -2,11 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-//test api request
-// import { signup, login, logout } from './util/session_api_util';
-//test session actions
-import { signup, login, logout, clearErrors } from './actions/session_actions';
-
+import { fetchDirects } from './actions/direct_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -24,13 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-
-  //test api request and session actions
-  // window.signup = signup;
-  // window.login = login;
-  window.logout = logout;
-  // window.clearErrors = clearErrors;
-
+  window.fetchDirects = fetchDirects;
   //test store and reducers
   window.getState = store.getState;
   window.dispatch = store.dispatch;

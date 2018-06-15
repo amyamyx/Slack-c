@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { closeModal } from '../../../../actions/modal_actions';
 import { fetchChannels, fetchJoinedChannels } from '../../../../actions/channel_actions';
-import { createChannelMembership } from '../../../../actions/channe_membership_actions';
+import { createChannelMembership } from '../../../../actions/membership_actions';
 import BrowseChannels from './browse_channels';
 
 const msp = state => {

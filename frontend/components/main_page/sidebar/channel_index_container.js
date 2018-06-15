@@ -6,11 +6,9 @@ import { receiveProps } from '../../../actions/ui_props_actions';
 import ChannelIndex from './channel_index';
 
 const msp = (state, ownProps) => {
-  // debugger;
-
-  // joinedChannels not passed properly
   const joinedChannels = Object.values(state.entities.joinedChannels) || new Array();
-  const props = merge({}, ownProps, { joinedChannels, hasModal: !!state.ui.modal } )
+  const hasModal = !!state.ui.modal
+  const props = merge({}, ownProps, { joinedChannels, hasModal } )
   return props;
 }
  

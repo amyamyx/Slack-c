@@ -27,16 +27,6 @@ const Home = () => (
         <p>Already using Slack? <span><Link to="/login">Sign in.</Link></span></p> 
       </div>
     </section>
-
-    <section className="section-two">
-      section-two
-    </section>
-
-    <footer>
-      <div className="footer-nav">footer-nav</div>
-      <div className='footer-term'>footer-term</div>
-    </footer>
-
   </div>
 )
 
