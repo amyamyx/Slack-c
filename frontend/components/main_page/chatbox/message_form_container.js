@@ -4,7 +4,6 @@ import { createChannelMessage } from '../../../actions/message_actions';
 import { fetchChannel } from '../../../actions/channel_actions';
 
 const msp = (state, ownProps) => {
-  
   return ({
     message: {content: ""},
     channel: state.entities.channels[ownProps.channelId],
