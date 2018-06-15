@@ -21,7 +21,7 @@ class Sidebar extends React.Component {
       directId, 
       channelId, 
       currentUser,
-      logout, 
+      logout,
       closeModal
      } = this.props;
 
@@ -32,7 +32,7 @@ class Sidebar extends React.Component {
           <div>
             <h3 className="team-name">{team.name}</h3>
             <span>{currentUser.username}</span>
-            <button onClick={() => handleClick()}>logout</button>
+            <button onClick={() => this.handleClick()}>logout</button>
           </div>
         </div>
 
