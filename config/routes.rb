@@ -16,12 +16,12 @@ Rails.application.routes.draw do
 
     resources :channels, only: [:show, :update, :destroy] do
       resources :channel_memberships, only: [:index, :create]
-      resources :channel_messages, only: [:index, :create]
+      resources :messages, only: [:index, :create]
     end
-
+    
     resources :directs, only: [:show] do
-      resource :direct_memberships, only: [:index, :create, :update]
-      resources :direct_messages, only: [:index, :create]
+      resources :direct_memberships, only: [:index, :create, :update]
+      resources :messages, only: [:index, :create]
     end
   end
 end

@@ -26,7 +26,7 @@ class Channel < ApplicationRecord
     class_name: :User
   
   
-  has_many :channel_messages, dependent: :destroy
+  has_many :messages, as: :messageable
   has_many :channel_memberships, dependent: :destroy
   has_many :channel_members,
     through: :channel_memberships,

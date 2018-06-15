@@ -22,4 +22,9 @@ class Api::DirectMessagesController < ApplicationController
   def direct_message_params
     params.require(:direct_message).permit(:content)
   end
+<<<<<<< HEAD
 end
+=======
+end
+# comment polymorphic
+>>>>>>> polymorphic

@@ -1,8 +1,13 @@
 import { connect } from 'react-redux';
 import Chatbox from './chatbox';
+import { fetchChannel } from '../../../actions/channel_actions';
 
-const msp
+const msp = state => ({
+  channelId: 1
+})
 
-const mdp
+const mdp = dispatch => ({
+  fetchChannel: channelId => dispatch(fetchChannel(channelId))
+})
 
-export default conect(msp, mdp)(Chatbox);
+export default connect(msp, mdp)(Chatbox);
