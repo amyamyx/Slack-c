@@ -29,14 +29,17 @@ class ChannelIndex extends React.Component{
     const { joinedChannels, channelId, closeModal, openModal } = this.props;
     return (
       <div className="sidebar-channel-index">
-        <h4>Channels</h4>
-        {joinedChannels.map((channel, idx) => (
-          <Link className="item-link" to={`/channels/${channel.id}`} key={idx} onClick={() => this.handleModalProps(channel.id)}>
-            <ChannelIndexItem channel={channel} channelId={channelId} />
-          </Link>
-        ))}
-        <Link to="/newChannel" onClick={closeModal} ><button>New Channel</button></Link>
-        <button onClick={this.handleJoin}>Join Channels</button>
+        <h4 className="sidebar-title" onClick={this.handleJoin}>Channels</h4>
+        <div className="channel-list">
+          {joinedChannels.map((channel, idx) => (
+            <Link className="item-link" to={`/channels/${channel.id}`} key={idx} onClick={() => this.handleModalProps(channel.id)}>
+              <ChannelIndexItem channel={channel} channelId={channelId} />
+            </Link>
+          ))}
+        </div>
+
+        <Link to="/newChannel" onClick={closeModal}><i className="far fa-plus-circle"></i></Link>
+        {/* <button onClick={this.handleJoin}>Join Channels</button> */}
       </div>
     )
   }

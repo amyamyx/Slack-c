@@ -9,13 +9,17 @@ const SidebarHeader = (props) => {
 
   return(
     <div className="sidebar-header">
-      <h3 className="team-name">{props.team.name}</h3>
-      <span>{props.currentUser.username}</span>
+      <div>
+        <h3 className="team-name">{props.team.name}</h3>
+        <span>{props.currentUser.username}</span>
+      </div>
       <button onClick={() => handleClick()}>logout</button>
       <br/>
-      <input type="text" placeholder="Jump to" />
+      <div>
+      <input type="text" className="jump" placeholder="Jump to" />
       <p> All Unreads</p>
       <p> All Threads</p>
+      </div>
     </div>
   );
 }

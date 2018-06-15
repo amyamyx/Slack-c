@@ -13,7 +13,7 @@ const ChannelIndexItem = (props) => {
   
   return (
     <div className={ classes }>
-      <span> # {props.channel.name}</span>
+      <span> <span className="hashtag">#</span> {props.channel.name}</span>
     </div>
   )
 }

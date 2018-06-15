@@ -11,7 +11,7 @@
 }
 
 .sidebar {
-  background: #473A4A;
+  background: #4c3a4a;
   max-height: 100%;
   width: 266px;
   padding-bottom: none;
@@ -22,14 +22,79 @@
 
 .sidebar-header {
   padding-left: 20px;
+  line-height: 0.5em;
+}
+
+.sidebar-body {
+  overflow: scroll;
+}
+
+.jump {
+  width: 160px;
+  // margin-left: 20px;
+  // margin-right: 10px;
+  // margin-top: 10px;
+  margin: 15px 10px 18px 20px;
+  background: #352133;
+  border: transparent;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: #c6bfc5;
+}
+
+.jump:focus {
+  outline: none;
 }
 
 .team-name {
   color: white;
 }
 
+.all {
+  display: flex;
+  margin-left: 20px;
+  color: #b6aeb4;
+}
+
+.all-unreads {
+  margin-top: -5px;
+  margin-left: 12px;
+}
+
+.all-threads {
+  margin-top: -5px;
+  margin-left: 8px;
+}
+
+.sidebar-channel-index {
+  margin-top: -10px;
+  position: relative;
+}
+
+.sidebar-title {
+  font-weight: 400;
+  margin-left: 10px;
+  padding-left: 10px;
+  width: 150px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.sidebar-title:hover {
+  background: #352133;
+}
+.channel-list {
+  margin-top: -23px;
+}
+
 .channel-index-item {
   padding-left: 20px;
+  font-weight: 300;
+}
+
+.hashtag {
+  color: #9c929b;
 }
 
 .highlight {
@@ -38,4 +103,16 @@
 
 .highlight span {
   color:white;
+}
+
+.fa-plus-circle {
+  position: absolute;
+  text-decoration: none;
+  color: #9d929b;
+  right: 20px;
+  top: 4px;
+}
+
+.fa-plus-circle:hover {
+  color: #b6aeb4;
 }
