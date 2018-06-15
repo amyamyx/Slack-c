@@ -56,11 +56,11 @@ class Sidebar extends React.Component {
             currentUser={currentUser}
           />
 
-          <DirectIndexContainer
+          {/* <DirectIndexContainer
             teamId={team.id}
             directId={directId}
             currentUser={currentUser}
-          />
+          /> */}
         </div>
       </div>
     )
