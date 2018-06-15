@@ -56,37 +56,44 @@ class BrowseChannels extends React.Component {
             <Link to="/newChannel" className="create-link"><button onClick={closeModal} className="create-btn">Create Channel</button></Link>
           </div>
 
-          {/* list of unjoined channels */}
-          <div className="joinable-channels">
-            <h3>Channels you can join</h3>
-            <ul className="joinable-channel-index">
-            {joinableChannels.map( channel => (
-              <li 
-                key={channel.id}
-                className="joinable-channel"
-                onClick={this.handleClick(channel.id)}
-              >
-                {`# ${channel.name}`}
-              </li>
-            ))}
-            </ul>
+          <div className="browse-channels-search">
+            <span className="browse-search-icon"><i class="far fa-search"></i></span>
+            <input className="browse-search-input" type="search" placeholder="Search channels" />
           </div>
 
-          {/* list of joined channels */}
-          <div className="joined-channels">
-            <h3>Channels you belong to</h3>
-            <ul className="joined-channel-index">
-              {joinedChannels.map( channel => (
-                <li
+          <div className="all-channels">
+            {/* list of unjoined channels */}
+            <div className="joinable-channels">
+              <div className="status-title">Channels you can join</div>
+              <ul className="joinable-channel-index">
+              {joinableChannels.map( channel => (
+                <li 
                   key={channel.id}
-                  className="joined-channel"
-                  onClick={closeModal}>
-                  <Link to={`/channels/${channel.id}`}>
-                    {`# ${channel.name}`}
-                  </Link>
-                </li> 
+                  className="browse-single-channel"
+                  onClick={this.handleClick(channel.id)}
+                >
+                  {`# ${channel.name}`}
+                </li>
               ))}
-            </ul>
+              </ul>
+            </div>
+
+            {/* list of joined channels */}
+            <div className="joined-channels">
+              <div className="status-title">Channels you belong to</div>
+              <ul className="joined-channel-index">
+                {joinedChannels.map( channel => (
+                  <li
+                    key={channel.id}
+                    className="browse-single-channel"
+                    onClick={closeModal}>
+                    <Link to={`/channels/${channel.id}`} className="joined-link">
+                      {`# ${channel.name}`}
+                    </Link>
+                  </li> 
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
