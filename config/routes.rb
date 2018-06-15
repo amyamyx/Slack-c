@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get 'api/teams/:team_id/channels/:user_id', to: 'api/channels#joined_index'
   root to: 'static_pages#root'
-
+  mount ActionCable.server => '/cable'
   namespace :api, defaults: {format: :json} do
-    resources :users, only: [:create] do
+    resources :users, only: [:create, :index] do
       resources :teams, only: [:index]
     end
     

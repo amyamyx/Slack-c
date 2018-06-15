@@ -1,7 +1,9 @@
 class Api::DirectMembershipsController < ApplicationController
   def index
-    @direct_memberships = Direct.find(params[:direct_id])
-                                .direct_memberships
+    # direct_ids = current_user.directs.where(team_id: params[:team_id]).pluck(:id)
+    # all_memberships = current_user.direct_memberships
+    # @direct_memberships = all_memberships.select{|el| direct_ids.include?(el.direct_id) }
+    @direct_memberships = Direct.find(params[:direct_id]).direct_memberships
   end
 
   def create

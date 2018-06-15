@@ -34,3 +34,10 @@ export const deleteChannel = channelId => (
     url: `api/channels/${channelId}`,
   })
 )
+
+export const fetchJoinedChannels = (teamId, userId) => (
+  $.ajax({
+    type: 'GET',
+    url: `api/teams/${teamId}/channels/${userId}`
+  })
+)

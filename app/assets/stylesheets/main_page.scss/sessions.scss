@@ -1,0 +1,143 @@
+.session-form-div{
+  background: #f9f9f9;
+  height: 700px;
+}
+
+.header {
+  background: white;
+}
+
+#session-form {
+  border: 2px solid #e8e8e8;
+  background: white;
+  width: 620px;
+  margin: auto;
+  // position: absolute;
+  // left: 250px;
+  margin: auto;
+  margin-top: 60px;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.25);
+}
+
+.form-title {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.form-title p{
+  // text-align: center;
+  margin-top: -20px;
+  color: #2c2d30;
+  margin-bottom: 25px;
+}
+
+.session-form{
+  position: relative;
+}
+
+.session-errors{
+  position: absolute;
+  line-height: 0.1em;
+  top: -44px;
+  color: red;
+}
+
+.label{
+  margin: 0 20%;
+  margin-bottom: 10px;
+}
+
+.label span {
+  font-weight: 700;
+}
+.session-input {
+  border: 0;
+  height: 45px;
+  width: 350px;
+  border: 1px solid #919193;
+  margin: 0 20%;
+  margin-top: 8px;
+  font-size: 18px; 
+  padding-left: 20px;
+  border-radius: 3px;
+}
+
+.session-input:focus {
+  outline: none;
+}
+
+.session-input::-webkit-input-placeholder {
+  color: #919193;
+}
+
+// .buttons {
+//   display: flex;
+//   margin: 20px 40%;
+  // background: tomato;
+  // width: 300px;
+// }
+
+.session-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: none;
+  background-color: #008952;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 375px;
+  height: 51px;
+  margin: 0 20%;
+  margin-top: 16px;
+  font-weight: 700;
+}
+
+.session-button:hover {
+  background-color: #016b41;
+}
+
+.session-button:focus {
+  outline: none;
+}
+
+.checkbox {
+  margin: 0 20%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  position: relative;
+}
+
+.checkbox-input {
+  margin-top: 4px;
+}
+
+.checkbox span {
+  font-size: 16px;
+  margin-left: 8px;
+}
+.demo-login {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-decoration: underline;
+  font-size: 16px;
+  border: none;
+  // margin-left: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  color: #2785c1;
+}
+
+.demo-login:hover {
+  text-decoration: underline;
+  background: #e8e8e8;
+  border-radius: 5px;
+}

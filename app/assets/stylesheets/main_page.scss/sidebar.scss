@@ -1,0 +1,185 @@
+.item-link {
+  text-decoration: none;
+  color: #cac4c9;
+}
+
+.main-page {
+  background: white;
+  color: black;
+  display: flex;
+  height: 700px;
+}
+
+.sidebar {
+  background: #4c3a4a;
+  max-height: 100%;
+  width: 266px;
+  padding-bottom: none;
+  color: #cac4c9;
+  overflow: scroll;
+  line-height: 1.8em;
+}
+
+.sidebar-header {
+  padding-left: 20px;
+  line-height: 1em;
+}
+
+.sidebar-header-div {
+  // margin-top: px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.sidebar-user {
+  margin-top: -10px;
+  font-size: 14px;
+}
+
+.logout {
+  right: 8px;
+  top: 13px;
+  // padding: 5px 10px;
+  border: transparent;
+  border-radius: 5px;
+  background: #4c3a4a;
+  cursor: pointer;
+  color: #9d929b;
+}
+
+.logout:hover {
+  background: #352133;
+}
+
+.logout:focus {
+  outline: none;
+}
+
+.sidebar-body {
+  overflow: scroll;
+}
+
+.jump {
+  width: 160px;
+  // margin-left: 20px;
+  // margin-right: 10px;
+  // margin-top: 10px;
+  margin: 15px 10px 18px 20px;
+  background: #352133;
+  border: transparent;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: #c6bfc5;
+}
+
+.jump:focus {
+  outline: none;
+}
+
+.team-name {
+  color: white;
+}
+
+.all {
+  display: flex;
+  margin-left: 20px;
+  color: #b6aeb4;
+}
+
+.all-unreads {
+  margin-top: -5px;
+  margin-left: 12px;
+}
+
+.all-threads {
+  margin-top: -5px;
+  margin-left: 8px;
+}
+
+.sidebar-channel-index {
+  margin-top: -10px;
+  position: relative;
+}
+
+.sidebar-title {
+  font-weight: 400;
+  margin-left: 10px;
+  padding-left: 10px;
+  width: 150px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.sidebar-title:hover {
+  // background: #352133;
+}
+.channel-list {
+  margin-top: -23px;
+}
+
+.channel-index-item {
+  padding-left: 20px;
+  font-weight: 300;
+}
+
+.hashtag {
+  color: #9c929b;
+}
+
+.highlight {
+  background: #4c9689;
+}
+
+.highlight span {
+  color:white;
+}
+
+.fa-plus-circle {
+  position: absolute;
+  text-decoration: none;
+  color: #9d929b;
+  right: 20px;
+  top: 4px;
+}
+
+.fa-plus-circle:hover {
+  color: #b6aeb4;
+}
+
+.thumb {
+  display: block;
+  position: relative;
+}
+
+.thumb:after {
+  content: attr(title);
+  display: none;
+  position: absolute;
+  left: 18%;
+  transform: translateX(-16%);
+  bottom: 28px;
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 5px;
+
+}
+
+.thumb:before {
+  content: "";
+  display: none;
+  position: absolute; 
+  left: 30%;
+  transform: translateX(-140%);
+  top: -1px;
+  border-top: 7px solid black;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+.thumb:hover:before, .thumb:hover:after {
+  display: block;
+}

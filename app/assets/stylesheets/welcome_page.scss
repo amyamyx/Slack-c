@@ -7,6 +7,10 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+.welcome{
+  height: 100%;
+}
+
 header {
   border-bottom: 2px solid #ebebeb;
   // #ebebeb
@@ -24,6 +28,10 @@ header {
  margin: auto 0;
 //  width: 100px;
  
+}
+
+.logo-link {
+  text-decoration: none;
 }
 
 .logo {
@@ -106,6 +114,15 @@ header {
   font-size: 16px;
   margin-right: 10px;
   border-radius: 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: #3f45ad;
+  border: 1px solid #3f45ad !important;
 }
 
 // .clearfix:after{
@@ -120,6 +137,8 @@ header {
 
 .section-one {
   display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 .main-img img {
@@ -131,8 +150,10 @@ header {
 
 .main-text {
   margin-top: 20px;
-  margin-left: -80px;;
+  margin-left: -80px;
   padding-right: 35px;
+  position:absolute;
+  left: 722px;
 }
 
 .main-text h1 {
@@ -140,6 +161,10 @@ header {
   font-family: serif;
   color: #323747;
   font-weight: 700;
+}
+
+.main-text p {
+  flex-wrap: wrap;
 }
 
 .second {
@@ -157,9 +182,18 @@ header {
 .get-started {
   font-size: 13px;
   background: #3f46ad;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   color: #fff;
   padding: 20px 35px;
   border-radius: 5px;
+}
+
+.get-started:hover {
+  cursor: pointer;
+  background: #1c2a9c;
 }
 
 .main-text p:nth-of-type(2) {

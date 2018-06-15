@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:f1067d68d705d0e0ae64dcddbd94705f@tetra.redistogo.com:9202/
   channel_prefix: SlackClone_production

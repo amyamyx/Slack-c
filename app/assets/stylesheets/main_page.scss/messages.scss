@@ -1,0 +1,113 @@
+.message-form{
+  height: 12%;
+  margin: 0;
+  overflow: scroll;
+  // background: tomato;
+  display: flex;
+  margin-left: 20px;
+}
+
+.message-index{
+  height: 78%;
+  margin: 0;
+  width: 700px;
+  overflow: scroll;
+  // background: lightseagreen;
+}
+
+
+.message-list {
+  // overflow: hidden;
+  list-style: none;
+}
+
+.message-index-item {
+  margin-left: -10px;
+  margin-bottom: 5px;
+  // background: lightseagreen;
+}
+
+.message-index-item:hover {
+  background: #f9f9f9;
+}
+
+.message-list-item {
+  display: flex;
+}
+
+
+.profile-img img {
+  height: 36px;
+  width: auto;
+  border-radius: 3px;
+}
+
+.message-right{
+  margin-left: 5px;
+}
+
+.name-time {
+  display: flex;
+}
+
+.sender {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+
+.send-time{
+  font-size: 12px;
+  color:#717274;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+.message-content {
+  font-size: 15px;
+  color: #2c2d30;
+}
+
+
+.fa-plus {
+  border: 2px solid #b2b2b3;
+  border-right: none;
+  background: white;
+  color: 2px solid #b2b2b3;
+  padding: 11px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.message-form textarea {
+  border: transparent;
+  height: 22px;
+  width: 670px;
+  box-shadow:none;
+  padding: 8px;
+  font-size: 14px;
+  resize: none;
+  border: 2px solid #b2b2b3;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.form-input {
+  display: flex;
+}
+
+.message-form textarea:focus {
+  outline:none;
+  border: 2px solid #717274;
+  .form-input {
+    border: 2px solid #717274;
+  }
+}
+
+// textarea:focus + .form-input {
+//   border: 2px solid #717274;
+// }
+
+.message-form textarea::-webkit-input-placeholder {
+  color: #b2b2b2;
+}

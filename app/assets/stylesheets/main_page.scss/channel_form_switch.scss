@@ -1,0 +1,85 @@
+// .channel-form-div {
+//   position: fixed;
+//   height: 100%;
+//   width: 100%;
+// }
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  background-color: #F0623A;
+  -webkit-transition: .1s;
+  transition: .1s;
+  .toggle-public {
+    display: none;
+  }
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  color: white;
+  height: 26px;
+  width: 26px;
+  left: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+input:checked + .slider {
+  background-color: #118854;
+  .toggle-private {
+    display: none;
+  }
+  .toggle-public {
+    display: inherit;
+  }
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #118854;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(70px);
+  -ms-transform: translateX(70px);
+  transform: translateX(70px);
+}
+
+.toggle {
+  color: white;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.toggle-public {
+  margin-left: 20px;
+}
+
+.toggle-private {
+  margin-left: 38px;
+}
+
+.invisible {
+  display: none;
+}
+

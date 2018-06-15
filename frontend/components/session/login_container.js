@@ -4,13 +4,14 @@ import SessionForm from './session_form';
 
 const msp = state => ({
   errors: state.errors,
-  formType: "Log In",
+  formType: "Sign in",
   errors: state.errors.session
 })
 
 const mdp = dispatch => ({
   action: user => dispatch(login(user)),
-  clearErrors: () => dispatch(clearErrors())
+  clearErrors: () => dispatch(clearErrors()),
+  login: user => dispatch(login(user))
 })
 
 export default connect(

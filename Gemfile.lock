@@ -133,6 +133,7 @@ GEM
     public_suffix (3.0.2)
     puma (3.11.4)
     rack (2.0.5)
+    rack-cors (1.0.2)
     rack-livereload (0.3.17)
       rack
     rack-test (1.0.0)
@@ -234,6 +235,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 3.7)
+  rack-cors
   rack-livereload
   rails (~> 5.1.6)
   rails_12factor
@@ -248,4 +250,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

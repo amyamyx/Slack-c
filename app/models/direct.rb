@@ -12,9 +12,9 @@ class Direct < ApplicationRecord
   belongs_to :team
   
   has_many :messages, as: :messageable
-  has_many :driect_memberships
+  has_many :direct_memberships
   has_many :direct_members,
-    through: :driect_memberships,
+    through: :direct_memberships,
     source: :user
 
   def ensure_membership(user)

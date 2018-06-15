@@ -1,0 +1,107 @@
+.modal-background {
+  //  position: fixed;
+  //  top: 0;
+  //  bottom: 0;
+  //  right: 0;
+  //  left: 0;
+  //  background: rgba(0, 0, 0, 0.7);
+  //  z-index: 10;
+
+}
+
+.member-index {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  margin-top: 70px;
+  width: 300px;
+  height: 600px;
+  border-left: 1px solid #e8e8e8;
+  // background: peachpuff;
+//  transform: translate(-50%, -50%);
+}
+
+.member-index-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  padding:0 20px 0 10px;
+  background: #f9f9f9;
+  color: #2c2d30;
+}
+ 
+.close-x {
+  font-size: 28px;
+  font-weight: lighter;
+  margin-top: 10px;
+  color: #717274;
+  cursor: pointer;
+}
+
+.member-index-info {
+  display: flex;
+  border-bottom: 1px solid #e8e8e8;
+  height: 65px;   
+  padding-left: 10px;
+  color: #6d6e6f
+}
+
+.member-index-info-left {
+  margin-top: 20px;
+}
+
+.info-circle-icon {
+   display: inline-block;
+   width: 20px;
+   height:auto;
+   vertical-align: middle;
+   margin-top: -4px;
+}
+
+.channel-detail {
+  margin-top: 40px;
+}
+
+
+.member-count-title {
+  border-bottom: 1px solid #e8e8e8;
+  height: 65px;
+  padding-left: 10px;
+  display: flex;
+  // position: relative;
+}
+
+.member-count-icon {
+  margin-top: 20px;
+}
+
+.member-count {
+  margin-top: 20px;
+  margin-left: 5px;
+  color: #6d6e6f;
+  
+}
+
+.member-index-list {
+  margin-top: 10px;
+  height: 400px;
+  background: white;
+  overflow: scroll;
+}
+.member-index-item {
+  padding-left: 10px;
+  display: flex;
+}
+
+.member-index-item img {
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+}
+
+.member-username {
+  margin-left: 10px;
+  color: #2c2d30;
+  font-weight: 700;
+}
+

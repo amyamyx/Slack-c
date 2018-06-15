@@ -1,0 +1,135 @@
+.browse-channels {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+  background: white;
+  overflow: hidden;
+}
+
+
+.joinable-channel {
+  cursor: pointer;
+}
+
+.joined-channel {
+  cursor: pointer;
+}
+
+.browse-channels-content {
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.browse-channels-title {
+  display: flex;
+  justify-content: space-between;
+  // background: lightseagreen;
+}
+
+.browse-channels-title h1 {
+  font-weight: 750;
+}
+
+.create-btn {
+  border: transparent;
+  background: #008951;
+  color: white;
+  padding: 10px 13px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-top: 25px;
+}
+
+.browse-channels-search {
+  border: 1px solid #919193;
+  color: #939395;
+  border-radius: 4px;
+}
+
+.browse-search-icon {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.browse-search-input {
+  border: transparent;
+  font-size: 14px;
+  padding: 12px 5px 10px 10px;
+  font-weight: 300;
+}
+
+.browse-search-input:focus {
+  outline: none;
+}
+
+.browse-search-input::-webkit-input-placeholder{
+  color: #999999;
+}
+
+.all-channels {
+  overflow-y: scroll !important;
+  margin-top: 10px;
+  height: 450px;
+}
+
+
+.joinable-channels {
+  // background: tomato;
+}
+
+.joinable-channel-index {
+  list-style: none;
+}
+
+.browse-single-channel {
+  border: 1px solid white;
+  padding: 15px 0 12px 10px;
+  margin-left: -40px;
+  margin-right: 10px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.browse-single-channel:hover {
+  background: #eaf5fc;
+  border: 1px solid #cbe7f7;
+  border-radius: 6px;
+}
+
+.joined-channels {
+  // background: lightblue;
+}
+
+.joined-channel-index {
+  list-style: none;
+}
+
+.joined-link {
+  text-decoration: none;
+}
+
+.status-title {
+  background: #f9f9f9;
+  color: #737476;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.all-channels::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+.all-channels::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #d9d9de;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}

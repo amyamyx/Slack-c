@@ -3,10 +3,13 @@ import { connect } from 'react-redux';
 import { createChannelMessage } from '../../../actions/message_actions';
 import { fetchChannel } from '../../../actions/channel_actions';
 
-const msp = (state, ownProps) => ({
-  message: {content: ""},
-  channelId: 1
-})
+const msp = (state, ownProps) => {
+  return ({
+    message: {content: ""},
+    channel: state.entities.channels[ownProps.channelId],
+    hasModal: state.ui.modal
+  })
+}
 
 const mdp = dispatch => ({
   // actions to create channel and direct messages

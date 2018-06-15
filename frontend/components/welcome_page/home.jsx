@@ -14,24 +14,19 @@ const Home = () => (
       <div className="main-text">
         <h1>Where Work </h1>
         <h1 className="second">Happens</h1>
-        <p>When your team needs to kick off a project, hire a new employee, deploy some code, review a sales contract, finalize next year's budget, measure an A/B test, plan your next office opening, and more, Slack has you covered.</p>
+        <p>When your team needs to kick off a project, hire a new employee, deploy
+           some code, review a sales contract, finalize next year's budget, measure
+            an A/B test, plan your next office opening, and more, Slack-c has you
+            covered.</p>
         <form>
           {/* <input type="text" placeholder="Email address" value=""/> */}
-          <button className="get-started" type="submit">GET STARTED</button>
+          <Link to="/signup">
+            <button className="get-started" type="submit">GET STARTED</button>
+          </Link>
         </form>
-        <p>Already using Slack? <span><Link to="/login">Sign in.</Link></span></p> 
+        <p>Already using Slack-c? <span><Link to="/login">Sign in.</Link></span></p> 
       </div>
     </section>
-
-    <section className="section-two">
-      section-two
-    </section>
-
-    <footer>
-      <div className="footer-nav">footer-nav</div>
-      <div className='footer-term'>footer-term</div>
-    </footer>
-
   </div>
 )
 
