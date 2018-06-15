@@ -93,6 +93,7 @@
 .message-index{
   height: 78%;
   margin: 0;
+  width: 700px;
   overflow: scroll;
   // background: lightseagreen;
 }
@@ -109,9 +110,14 @@
   // background: lightseagreen;
 }
 
+.message-index-item:hover {
+  background: #f9f9f9;
+}
+
 .message-list-item {
   display: flex;
 }
+
 
 .profile-img img {
   height: 36px;
@@ -157,8 +163,6 @@
   border-bottom-left-radius: 5px;
 }
 .message-form textarea {
-  // -webkit-appearance: none;
-  // -moz-appearance: none;
   border: transparent;
   height: 22px;
   width: 670px;

@@ -60,14 +60,17 @@ class MessageIndex extends React.Component {
     const { messages, users, channel } = this.props;
     const list = (
       messages.map( message => {
-        const username = users[message.userId].username;
-        return (
-          <MessageIndexItem
-            key={message.id}
-            message={message}
-            username={username}
-          />
-        );
+        if (users[message.userId]) {
+          return (
+            <MessageIndexItem
+              key={message.id}
+              message={message}
+              username={users[message.userId].username}
+            />
+          );
+        } else {
+          return;
+        }
       })
     );
 

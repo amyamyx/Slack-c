@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchDirects } from './actions/direct_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -20,11 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  window.fetchDirects = fetchDirects;
-  //test store and reducers
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  //
-
   ReactDOM.render(<Root store={ store }/>, root);
 });

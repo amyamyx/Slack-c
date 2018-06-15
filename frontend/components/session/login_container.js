@@ -4,7 +4,7 @@ import SessionForm from './session_form';
 
 const msp = state => ({
   errors: state.errors,
-  formType: "Log In",
+  formType: "Sign in",
   errors: state.errors.session
 })
 

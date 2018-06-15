@@ -14,7 +14,15 @@
  *= require_self
  */
 
- html, body{
+
+ html {
+   overflow:hidden;
+   height: 100%;
+   padding-bottom: 1px;
+ }
+
+ body{
+    overflow: auto;
     height:100%;
     margin: 0;
  }

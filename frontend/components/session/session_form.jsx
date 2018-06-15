@@ -28,22 +28,28 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <div className="session-errors">
         {this.props.errors.map((err, idx) => (
-          <li key={idx}>{err}</li>
+          <p key={idx} className="err">- {err}</p>
         ))}
-      </ul>
+      </div>
     )
   }
 
   render() {
     return (
-      <div>
+      <div className="session-form-div">
         <HeaderContainer />
         <div id="session-form" className="group">
           <form className="session-form">
-            <h3 className="session-errors">{this.renderErrors()}</h3>
-            <h1>{this.props.formType}</h1>
+            
+          {this.renderErrors()}
+            <div className="form-title">
+              <h1>{this.props.formType} to Appp Academy</h1>
+              <p>apppacademy.slack-c.com</p>
+            </div>
+
+            <p className="label"> Enter your <span>username</span> and <span>password</span></p>
             <input
               type="text"
               className="session-input group"
@@ -60,8 +66,10 @@ class SessionForm extends React.Component {
               onChange={this.handleInput('password')}
             />
             <br />
-            <div className="buttons">
-              <button className="session-button group" onClick={this.handleSubmit}>{this.props.formType}</button>
+            <button className="session-button group" onClick={this.handleSubmit}><span>{this.props.formType}</span></button>
+            <div className="checkbox">
+              <input type="checkbox" className="checkbox-input" />
+              <span>Remember me</span>
               <button className="demo-login" onClick={this.handleClick}>Demo login</button>
             </div>
           </form>

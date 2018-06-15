@@ -8,8 +8,9 @@ const msp = ( state, ownProps ) => {
   const users = state.entities.users;
   return {
   channel,
+  users,
   messages: Object.values(state.entities.messages),
-  users
+  hasModal: !!state.ui.modal
 }}
 
 const mdp = dispatch => ({
