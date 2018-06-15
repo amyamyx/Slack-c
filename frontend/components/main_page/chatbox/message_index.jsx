@@ -40,13 +40,24 @@ class MessageIndex extends React.Component {
     });
   };
   
+  creator(){
+    const { users, channel } = this.props;
+    const creator= users[channel.creatorId]
+    return creator ? creator.username : "";
+  }
+
+  purpose() {
+    const { channel } = this.props;
+    return channel.purpose ? `Purpose: ${channel.purpose}` : "";
+  }
+
   scrollToBottom(){
     const index = ReactDOM.findDOMNode(this.index)
     if (index) index.scrollTop = index.scrollHeight;
   }
 
   render(){
-    const { messages, users } = this.props;
+    const { messages, users, channel } = this.props;
     const list = (
       messages.map( message => {
         const username = users[message.userId].username;
@@ -63,6 +74,9 @@ class MessageIndex extends React.Component {
     return (
       <div className="message-index" ref={el => { this.index = el }}>
         <ul className="message-list">
+          <h2># {channel.name} </h2>
+          <p>@{this.creator()} created this channel. This is the very 
+            beginning of the # {channel.name} channel. {this.purpose()}</p>
           {list}
         </ul>
       </div>

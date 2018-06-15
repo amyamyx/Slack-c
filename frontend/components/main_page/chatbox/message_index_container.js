@@ -4,10 +4,12 @@ import { fetchChannel } from '../../../actions/channel_actions';
 import { receiveMessage } from '../../../actions/message_actions';
 
 const msp = ( state, ownProps ) => {
+  const channel = state.entities.channels[ownProps.channelId] || {};
+  const users = state.entities.users;
   return {
-  channel: state.entities.channels[ownProps.channelId],
+  channel,
   messages: Object.values(state.entities.messages),
-  users: state.entities.users
+  users
 }}
 
 const mdp = dispatch => ({
