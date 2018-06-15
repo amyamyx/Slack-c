@@ -1,0 +1,87 @@
+.chatbox {
+  padding: 0;
+  margin:0;
+  max-height: 100%;
+  width: 100%;
+  // position: relative;
+}
+
+.chatbox-header {
+  display: flex;
+  justify-content: space-between;
+  height: 10%;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.chatbox-header-left {
+  padding-left: 20px;
+  margin-top: -10px;
+}
+
+.chatbox-header-left h3 { 
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header-member {
+  margin-top: -15px;
+  font-weight: 300;
+  color: #818284;
+  cursor:pointer;
+}
+
+.chatbox-header-right {
+  display: flex;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+.chatbox-header-right .icon {
+  font-size: 18px;
+  color: #717274;
+}
+
+.info-circle{
+  margin-top: 5px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.cog {
+  margin-top: 6px;
+  margin-right: 15px;
+}
+.chatbox-header-search {
+  display: flex;
+  border: 1px solid #919193;
+  border-radius: 5px;
+  // margin-left: 5px;
+  height: 35px;
+  text-align: center;
+  color: #717274;
+}
+
+.chatbox-header-search input {
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  border: transparent;
+  box-shadow:none;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.chatbox-header-search input:focus {
+  // border:none;
+  outline: none;
+}
+.chatbox-header-search input::-webkit-input-placeholder {
+  color: #b2b2b2;
+}
+
+.search-icon {
+  margin-top: 8px;
+}
+
+.chatbox-header-right i {
+  padding-left: 10px;
+}

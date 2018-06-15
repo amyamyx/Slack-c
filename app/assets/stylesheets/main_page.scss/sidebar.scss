@@ -113,7 +113,7 @@
 }
 
 .sidebar-title:hover {
-  background: #352133;
+  // background: #352133;
 }
 .channel-list {
   margin-top: -23px;
@@ -146,4 +146,40 @@
 
 .fa-plus-circle:hover {
   color: #b6aeb4;
+}
+
+.thumb {
+  display: block;
+  position: relative;
+}
+
+.thumb:after {
+  content: attr(title);
+  display: none;
+  position: absolute;
+  left: 18%;
+  transform: translateX(-16%);
+  bottom: 28px;
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 5px;
+
+}
+
+.thumb:before {
+  content: "";
+  display: none;
+  position: absolute; 
+  left: 30%;
+  transform: translateX(-140%);
+  top: -1px;
+  border-top: 7px solid black;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+.thumb:hover:before, .thumb:hover:after {
+  display: block;
 }
