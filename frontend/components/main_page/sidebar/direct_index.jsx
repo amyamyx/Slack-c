@@ -13,7 +13,7 @@ class DirectIndex extends React.Component {
   render() {
     return (
       <div className="direct-index">
-        <h4>Direct Messages </h4>
+        <h4 className="sidebar-title">Direct Messages </h4>
 
         {this.props.directs.map(direct => (
           <DirectIndexItem key={direct.id} directId={direct.id}/>

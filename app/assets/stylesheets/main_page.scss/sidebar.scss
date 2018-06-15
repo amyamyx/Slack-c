@@ -25,6 +25,33 @@
   line-height: 0.5em;
 }
 
+.sidebar-header-div {
+  // margin-top: px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.sidebar-user {
+  font-size: 14px;
+}
+
+.logout {
+  position: absolute;
+  right: 8px;
+  top: 13px;
+  padding: 5px 10px;
+  border: transparent;
+  border-radius: 3px;
+  background: #4c3a4a;
+  cursor: pointer;
+  color: #9d929b;
+}
+
+.logout:hover {
+  background: #352133;
+}
+
 .sidebar-body {
   overflow: scroll;
 }

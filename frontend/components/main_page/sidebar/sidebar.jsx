@@ -29,11 +29,13 @@ class Sidebar extends React.Component {
       <div className="sidebar">
         {/* <TeamIndexContainer/> */}
         <div className="sidebar-header">
-          <div>
+          <div className="sidebar-header-div">
             <h3 className="team-name">{team.name}</h3>
-            <span>{currentUser.username}</span>
-            <button onClick={() => this.handleClick()}>logout</button>
+            <button onClick={() => this.handleClick()} className="logout">logout</button>
           </div>
+          {/* <div className="sidebar-user-div"> */}
+            <span className="sidebar-user">hey, {currentUser.username}</span>
+          {/* </div> */}
         </div>
 
         <div className="sidebar-body">
