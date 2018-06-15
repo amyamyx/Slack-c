@@ -52,7 +52,7 @@ class ChannelForm extends React.Component {
       <div className="channel-form">
 
         <button className="esc-btn" onClick={this.handleClick}>
-          <span className="x">X</span>
+          <span className="x"><i class="fal fa-times"></i></span>
           <br/>
           <span>esc</span>
         </button>

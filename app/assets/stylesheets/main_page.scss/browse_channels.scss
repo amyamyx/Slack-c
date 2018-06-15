@@ -16,3 +16,38 @@
 .joined-channel {
   cursor: pointer;
 }
+
+.browse-channels-content {
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.browse-channels-title {
+  display: flex;
+  justify-content: space-between;
+  background: lightseagreen;
+}
+
+.browse-channels-title h1 {
+  font-weight: 750;
+}
+
+.create-btn {
+  border: transparent;
+  background: #008951;
+  color: white;
+  padding: 10px 13px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  margin-top: 25px;
+}
+
+.joinable-channels {
+  background: tomato;
+}
+
+.joined-channels {
+  background: lightblue;
+}
