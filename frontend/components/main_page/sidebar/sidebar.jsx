@@ -39,7 +39,7 @@ class Sidebar extends React.Component {
         </div>
 
         <div className="sidebar-body">
-          <input type="text" className="jump" value="Jump to..." />
+          <input type="text" className="jump" placeholder="Jump to..." />
           <div className="all"> 
             <i className="fas fa-align-left"></i>
             <span className="all-unreads">All Unreads</span>

@@ -4,10 +4,20 @@ import { Link, withRouter } from 'react-router-dom';
 class BrowseChannels extends React.Component {
   constructor(props) {
     super(props);
+    this.handleEscKey = this.handleEscKey.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchChannels(1)
+    document.addEventListener('keydown', this.handleEscKey, true)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleEscKey, true)
+  }
+
+  handleEscKey(e) {
+    if (e.key === "Escape") {this.props.closeModal()}
   }
 
   filterChannels(allChannels){
@@ -57,7 +67,7 @@ class BrowseChannels extends React.Component {
           </div>
 
           <div className="browse-channels-search">
-            <span className="browse-search-icon"><i class="far fa-search"></i></span>
+            <span className="browse-search-icon"><i className="far fa-search"></i></span>
             <input className="browse-search-input" type="search" placeholder="Search channels" />
           </div>
 
