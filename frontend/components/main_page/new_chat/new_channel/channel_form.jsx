@@ -10,6 +10,19 @@ class ChannelForm extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
+    this.handleEscKey = this.handleEscKey.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleEscKey, true)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleEscKey, true)
+  }
+
+  handleEscKey(e) {
+    if (e.key === "Escape") { this.props.history.go(-1) }
   }
 
   handleInput(type){
@@ -52,7 +65,7 @@ class ChannelForm extends React.Component {
       <div className="channel-form">
 
         <button className="esc-btn" onClick={this.handleClick}>
-          <span className="x"><i class="fal fa-times"></i></span>
+          <span className="x"><i className="fal fa-times"></i></span>
           <br/>
           <span>esc</span>
         </button>

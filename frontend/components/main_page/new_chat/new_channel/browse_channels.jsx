@@ -17,7 +17,7 @@ class BrowseChannels extends React.Component {
   }
 
   handleEscKey(e) {
-    if (e.key === "Escape") {this.props.closeModal()}
+    if (e.key === "Escape") { this.props.closeModal() }
   }
 
   filterChannels(allChannels){
