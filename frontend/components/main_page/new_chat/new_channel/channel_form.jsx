@@ -62,7 +62,7 @@ class ChannelForm extends React.Component {
   render() {
     console.dir(this.props.history)
     return (
-      <div className="channel-form">
+      <div className="channel-form slideInUp">
 
         <button className="esc-btn" onClick={this.handleClick}>
           <span className="x"><i className="fal fa-times"></i></span>
