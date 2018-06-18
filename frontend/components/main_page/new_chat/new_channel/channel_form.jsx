@@ -59,8 +59,13 @@ class ChannelForm extends React.Component {
     this.changeVisibility()
   }
 
+  checkBottonColor() {
+    return this.state.name === "" ? "" : "green";
+  }
+
   render() {
-    console.dir(this.props.history)
+
+    const buttonColor = this.checkBottonColor();
     return (
       <div className="channel-form">
 
@@ -128,7 +133,7 @@ class ChannelForm extends React.Component {
           </div>
           <div className="channel-form-buttons">
             <button onClick={this.handleClick} className="btn-channel btn-cancel">Cancel</button>
-            <button onClick={this.handleSubmit} className="btn-channel btn-create">Create Channel</button>
+            <button onClick={this.handleSubmit} className={`btn-channel btn-create ${buttonColor}`}>Create Channel</button>
           </div>
         </form>
       </div>

@@ -128,6 +128,10 @@
   border-radius: .25rem;
 }
 
+.btn-channel:focus {
+  outline: none;
+}
+
 .btn-cancel {
   font-weight: 400;
   color: #2c2d30;
@@ -146,4 +150,13 @@
   color: #5b5c5e;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;
+}
+
+button {
+  cursor: pointer;
+}
+
+.green {
+  background: #008952;
+  color: white;
 }
