@@ -1,6 +1,11 @@
 .channel-form {
-  width: 700px;
+  width: 646px;
   margin: 0 auto;
+  margin-top: 66px;
+}
+
+.channel-form h1 {
+  color: #2c2d30;
 }
 
 .esc-btn {
@@ -31,4 +36,114 @@
 
 .esc-btn:focus {
   outline: none;
+}
+
+.channel-form-des {
+  margin-top: -9px;
+  font-size: 14px;
+  color: #717274;
+}
+
+.the-form {
+  position: relative;
+}
+
+.channel-form-switch {
+  display: flex;
+}
+
+.channel-form-switch {
+  margin-top: 25px;
+}
+
+.public-text {
+  color: #2c2d30;
+  margin-left: 8px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.channel-form-label {
+  font-weight: 600;
+}
+
+.channel-form-label span {
+  font-weight: 300;
+  color: #717274;
+}
+
+.channel-form-name-input {
+  border: 1px solid #919193;
+  border-radius: 4px;
+  padding-left: 11px;
+  font-size: 18px;
+  color: #717274;
+}
+
+.name-input {
+  border: transparent;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 11px;
+  width: 580px;
+}
+
+.name-input:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder{
+  color: #b3b3b3;
+  font-weight: 300;
+}
+
+.channel-form-input-des {
+  font-size: .8rem;
+  margin-top: 5px;
+  color: #717274;
+  font-weight: 300;
+}
+
+.purpose-input {
+  border: 1px solid #919193;
+  width: 621px;
+  padding: 11px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.purpose-input:focus {
+  outline: none;
+}
+
+.channel-form-buttons {
+
+  position: absolute;
+  right: 0;
+}
+
+.btn-channel {
+  font-size: 20px;
+  padding: 12px 18px 14px 18px;
+  border-radius: .25rem;
+}
+
+.btn-cancel {
+  font-weight: 400;
+  color: #2c2d30;
+  background: #f9f9f9;
+  border: 1px solid #e8e8e8;
+  margin-right: 10px;
+}
+
+.btn-cancel:hover {
+  color: #0576b9;
+  background: #fff;
+}
+
+.btn-create {
+  font-weight: 700;
+  color: #5b5c5e;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
 }

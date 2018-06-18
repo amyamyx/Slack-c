@@ -62,17 +62,18 @@ class ChannelForm extends React.Component {
   render() {
     console.dir(this.props.history)
     return (
-      <div className="channel-form slideInUp">
+      <div className="channel-form">
 
         <button className="esc-btn" onClick={this.handleClick}>
           <span className="x"><i className="fal fa-times"></i></span>
           <br/>
           <span>esc</span>
         </button>
-        <h2>Create a <span className={`private ${this.privateVisible}`}>private</span> channel</h2>
-        <p>Channels are where your members communicate. They're best when organized around a topic -- #leads, for example.</p>
+        <h1>Create a <span className={`private ${this.privateVisible}`}>private</span> channel</h1>
+        <p className="channel-form-des">Channels are where your members communicate. They're best when organized around a topic -- #leads, for example.</p>
 
-        <form>
+        <form className="animated slideInUp the-form">
+
           <div className="channel-form-switch">
             <label className="switch">
               <input type="checkbox" 
@@ -90,7 +91,7 @@ class ChannelForm extends React.Component {
 
           <div className="channel-form-name">
             <label className="channel-form-label">Name</label>
-            <div>
+            <div className="channel-form-name-input">
               <span className={`channel-icon public ${this.publicVisible}`}>#</span>
               <span className={`channel-icon private ${this.privateVisible}`}>m</span>
               <input 
@@ -98,29 +99,37 @@ class ChannelForm extends React.Component {
                 value={this.state.name}
                 placeholder="e.g.leads"
                 onChange={this.handleInput('name')}
+                className="name-input"
               />
             </div>
-            <p> Names must be lowercase, without spaces or periods, and shorter than 22 characters.</p>
+            <p className="channel-form-input-des"> Names must be lowercase, without spaces or periods, and shorter than 22 characters.</p>
           </div>
 
           <div>
           <label className="channel-form-label">Purpose <span>(optional)</span></label>
+            <br />
             <input
               type="text"
               value={this.state.purpose}
               onChange={this.handleInput('purpose')}
+              className="purpose-input"
             />
-            <p>What's this channel about?</p>
+            <p className="channel-form-input-des">What's this channel about?</p>
           </div>
 
           <div>
           <label className="channel-form-label">Send Invites to: <span>(optional)</span></label>
             <input
               type="text"
+              placeholder="Search by name"
+              className="purpose-input"
             />
+            <p className="channel-form-input-des">Select up to 1000 people to add to this channel.</p>
           </div>
-          <button onClick={this.handleClick}>Cancel</button>
-          <button onClick={this.handleSubmit}>Create Channel</button>
+          <div className="channel-form-buttons">
+            <button onClick={this.handleClick} className="btn-channel btn-cancel">Cancel</button>
+            <button onClick={this.handleSubmit} className="btn-channel btn-create">Create Channel</button>
+          </div>
         </form>
       </div>
     )

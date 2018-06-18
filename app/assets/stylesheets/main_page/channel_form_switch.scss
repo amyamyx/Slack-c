@@ -9,8 +9,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 100px;
-  height: 30px;
+  width: 98px;
+  height:28px;
 }
 
 .switch input {display:none;}
@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 30px;
+  border-radius: 28px;
   background-color: #F0623A;
   -webkit-transition: .1s;
   transition: .1s;
@@ -35,8 +35,8 @@
   position: absolute;
   content: "";
   color: white;
-  height: 26px;
-  width: 26px;
+  height: 24px;
+  width: 24px;
   left: 2px;
   bottom: 2px;
   border-radius: 50%;
